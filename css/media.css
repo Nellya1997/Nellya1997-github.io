@@ -410,7 +410,11 @@
         cursor: pointer;
     }
 
-    .burder__line {
+    .burger-line {
+        transition: all 0.3s ease-in;
+    }
+
+    .burger-line {
         background-color: var(--white);
         height: 1px;
         position: absolute;
@@ -421,13 +425,25 @@
         transition: all 0.3s ease-in;
     }
 
-    .burder__line:first-child {
+    .burger-line:first-child {
         top: 0;
     }
 
-    .burder__line:last-child {
+    .burger-line:last-child {
         bottom: 0;
         top: auto;
+    }
+
+    .burger:hover .burger-line {
+        background-color: var(--pale-grey);
+    }
+
+    .burger:focus .burger-line {
+        background-color: var(--pale-grey);
+    }
+
+    .burger:active .burger-line {
+        background-color: var(--pale-grey);
     }
 
     .header {
@@ -453,7 +469,7 @@
         visibility: visible;
     }
 
-    .burger--active .burder__line:first-child {
+    .burger--active .burger-line:first-child {
         left: 0;
         top: 50%;
         transform: rotate(-45deg);
@@ -461,7 +477,7 @@
         transition: all 0.3s ease-in;
     }
 
-    .burger--active .burder__line:last-child {
+    .burger--active .burger-line:last-child {
         right: 25%;
         top: 50%;
         transform: rotate(45deg);
@@ -469,7 +485,7 @@
         transition: all 0.3s ease-in;
     }
 
-    .burger--active .burder__line:nth-child(2) {
+    .burger--active .burger-line:nth-child(2) {
         opacity: 0;
     }
 
