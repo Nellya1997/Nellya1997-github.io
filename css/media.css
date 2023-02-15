@@ -356,7 +356,8 @@
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
+
     .benefits__image {
         display: none;
     }
@@ -366,12 +367,9 @@
     }
 
     .teachers__picture {
-        border-radius: 32px 32px 0px 0px;
+        border-radius: 46px 46px 0px 0px;
         overflow: hidden;
     }
-}
-
-@media (max-width: 450px) {
 
     .container__row {
         padding-left: 15px;
