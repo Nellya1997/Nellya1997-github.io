@@ -363,8 +363,9 @@ body {
 }
 
 .button--play-podcats.play::after {
-    left: auto;
+    /* left: auto; */
     right: 0%;
+    left: 59%;
 }
 
 .button__pause {
