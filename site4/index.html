@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W-Wave Radio</title>
-    <link rel="icon" href="img/logo.svg">
+    <link rel="icon" href="img/favicon.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
     <link rel="stylesheet" href="css/justValidateTooltip.min.css">
@@ -136,40 +136,40 @@
                         </span>
                     </button>
 
-                    <button class="button button--ether js-play">
+                    <div class="header__button-ether">
+                        <button class="button button--ether js-play">
 
-                        <span class="button__pause">
-                            <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.69238 15.7965L11.5716 8.79964C12.1428 8.39982 12.1428 7.60018 11.5716 7.20036L1.69238 0.203465C0.994271 -0.296313 0 0.183473 0 1.00311V14.9969C0 15.8165 0.994271 16.2963 1.69238 15.7965Z"/>
-                            </svg>
-                        </span>
-                        <span class="header__ether-wrapper">
-                            <span class="header__ether-text">Ранее в&nbsp;эфире</span>
-                            <span class="header__ether-text">«Музыка»</span>
-                        </span>
-                    </button>
+                            <span class="button__pause">
+                                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.69238 15.7965L11.5716 8.79964C12.1428 8.39982 12.1428 7.60018 11.5716 7.20036L1.69238 0.203465C0.994271 -0.296313 0 0.183473 0 1.00311V14.9969C0 15.8165 0.994271 16.2963 1.69238 15.7965Z"/>
+                                </svg>
+                            </span>
+                            <span class="header__ether-wrapper">
+                                <span class="header__ether-text">Ранее в&nbsp;эфире</span>
+                                <span class="header__ether-text">«Музыка»</span>
+                            </span>
+                        </button>
 
-                    <button class="button button--ether js-play">
+                        <button class="button button--ether js-play">
 
-                        <span class="button__pause">
-                            <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.69238 15.7965L11.5716 8.79964C12.1428 8.39982 12.1428 7.60018 11.5716 7.20036L1.69238 0.203465C0.994271 -0.296313 0 0.183473 0 1.00311V14.9969C0 15.8165 0.994271 16.2963 1.69238 15.7965Z"/>
-                            </svg>
-                        </span>
+                            <span class="button__pause">
+                                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.69238 15.7965L11.5716 8.79964C12.1428 8.39982 12.1428 7.60018 11.5716 7.20036L1.69238 0.203465C0.994271 -0.296313 0 0.183473 0 1.00311V14.9969C0 15.8165 0.994271 16.2963 1.69238 15.7965Z"/>
+                                </svg>
+                            </span>
 
-                        <span class="header__ether-wrapper">
-                            <span class="header__ether-text">Сейчас в&nbsp;эфире</span>
-                            <span class="header__ether-text">«Как так?»</span>
-                        </span>
+                            <span class="header__ether-wrapper">
+                                <span class="header__ether-text">Сейчас в&nbsp;эфире</span>
+                                <span class="header__ether-text">«Как так?»</span>
+                            </span>
 
-                    </button>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- <div class="header__age"> -->
                 <div class="header__age-circle">
                     <span>12+</span>
                 </div>
-                <!-- </div> -->
             </div>
         </div>
     </header>
@@ -387,10 +387,9 @@
                     </div>
                     <div class="podcasts__wrapper-big">
                         <div class="podcasts__card">
-                            <!-- <time datatime="" class="podcasts__date">2&nbsp;июня</time> -->
                             <data value="06-02" class="podcasts__date">2&nbsp;июня</data>
                             <picture>
-                                <!-- <source type="image/jpeg" srcset="img/podcasts-5-320.jpg" media="(max-width: 740px)"> -->
+                                <source type="image/jpeg" srcset="img/podcasts-4-320.jpg" media="(max-width: 740px)">
                                 <source type="image/jpeg" srcset="img/podcasts-5-1920.jpg" media="(max-width: 2400px)">
                                 <img src="img/podcasts-5-1920.jpg" alt="Радио">
                             </picture>
@@ -398,7 +397,6 @@
                         <div class="podcasts__card-info">
                             <div class="podcasts__wrapper">
                                 <div class="podcasts__about">
-                                    <!-- <time datatime="" class="podcasts__time">7:03</time> -->
                                     <data value="7:03" class="podcasts__time">7:03</data>
                                     <span class="podcasts__info">Обо всём</span>
                                     <span class="subtitle">Пётр Дмитриевский</span>
@@ -571,7 +569,7 @@
                     </div>
                 </div>
                 <div class="flex">
-                    <button class="button button--podcasts">Ещё подкасты</button>
+                    <button class="button button--podcasts js-podcasts">Ещё подкасты</button>
                 </div>
             </div>
         </section>

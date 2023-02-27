@@ -24,6 +24,9 @@ body {
     /* overflow-x: hidden; */
 }
 
+.stop-scroll {
+    overflow-y: hidden;
+}
 
 .container {
     width: 1110px;
@@ -687,6 +690,10 @@ body {
     padding: 20px 0px 10px 0px;
     border-bottom: 1px solid var(--light-gray);
     position: relative;
+}
+
+.header__button-ether {
+    display: flex;
 }
 
 .header::before {

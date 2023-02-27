@@ -630,6 +630,7 @@
 
     .guests__picture img {
         max-width: 100%;
+        width: 100%;
     }
 
     /* FOOTER */
@@ -697,7 +698,7 @@
         top: 0;
         left: -114px;
         height: 100vh;
-        width: calc(100% + 228px);
+        width: 100vw;
         z-index: 2;
         display: flex;
         flex-direction: column;
@@ -823,6 +824,14 @@
         padding: 0;
     }
 
+    .header__button-ether {
+        display: none;
+    }
+
+    .header__button-ether.active {
+        display: block;
+    }
+
     .burger {
         width: 24px;
         height: 21px;
@@ -870,17 +879,46 @@
         display: none;
     }
 
-    .button--ether.active, .button--ether.active,
+    .header__button-ether.active {
+        position: absolute;
+        top: 30px;
+    }
+
+    /* .button--ether.active, .button--ether.active,
     .button--ether:nth-child(2).active {
         position: absolute;
         top: 65px;
         right: -68px;
-    }
+    } */
 
     .button--ether:nth-child(2).active {
-        top: 150px;
-        display: flex;
+        /* top: 150px; */
+        display: block;
         margin: 0;
+    }
+
+    .button--ether:first-child.active {
+        margin-bottom: 20px;
+    }
+
+    .header__what-button.open .button__pause::after,
+    .header__what-button.open .button__pause::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: '';
+        width: 10px;
+        height: 1px;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: var(--white);
+    }
+
+    .header__what-button.open .button__pause::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .header__what-button.open svg {
+        opacity: 0;
     }
 
     .button--ether:nth-child(3) {
@@ -889,6 +927,11 @@
 
     .button--ether:nth-child(3).active {
         display: flex;
+    }
+
+    .header__button-ether.active .button--ether {
+        margin-top: 30px;
+        display: block;
     }
 
     .button--podcasts {
@@ -913,7 +956,7 @@
         position: relative;
     }
 
-    .header__what-button.active .button__pause::after,
+    /* .header__what-button.active .button__pause::after,
     .header__what-button.active .button__pause::before {
         position: absolute;
         top: 50%;
@@ -927,7 +970,7 @@
 
     .header__what-button.active .button__pause::before {
         transform: translate(-50%, -50%) rotate(-45deg);
-    }
+    } */
 
     .form--search {
         right: -90px;
@@ -1536,8 +1579,32 @@
         line-height: 24px;
     }
 
+    .header__button-ether {
+        background-color: var(--white);
+        position: absolute;
+        top: 42px;
+        left: 0;
+        display: flex;
+        width: 100%;
+    }
+
+    .header__button-ether.active {
+        display: flex;
+    }
+
     .button--ether.active, .button--ether.active, .button--ether:nth-child(2).active {
         position: static;
+        padding-top: 15px;
+        flex-direction: column;
+        /* background-color: var(--white);
+        position: absolute;
+        top: 42px;
+        left: 0; */
+    }
+
+    .button--ether:nth-child(2).active {
+        right: 0;
+        left: auto;
     }
 
     .header__what-button span:first-child, .header__what-button span:nth-child(2) {
@@ -1788,9 +1855,21 @@
         flex-direction: column;
     }
 
+    /* .podcasts__wrapper-big.active {
+        display: block;
+    } */
+
     .podcasts__wrapper-big:nth-last-child(-n+4) {
         display: none;
     }
+
+    .podcasts__wrapper-big.active {
+        display: block;
+    }
+
+    /* .button--podcasts.active {
+        display: none;
+    } */
 
     .podcasts__card,
     .podcasts__card-info,
@@ -2218,6 +2297,12 @@
         flex-direction: column;
         /* margin-bottom: 18px; */
         margin-bottom: 0;
+    }
+
+    .playlists__wrapper .swiper-pagination,
+    .playlists__wrapper .swiper-button-next,
+    .playlists__wrapper .swiper-button-prev {
+        display: none;
     }
 
     /* PURCHASE */

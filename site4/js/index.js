@@ -31,6 +31,7 @@ let navigation = document.querySelector('.js-navigation');
 burger.addEventListener('click',
 function() {
     navigation.classList.toggle('active');
+    document.body.classList.toggle('stop-scroll');
 }
 )
 
@@ -44,11 +45,13 @@ let closePopup = document.querySelector('.js-close-popup');
 popupButton.addEventListener('click',
 function() {
     popup.classList.add('open');
+    document.body.classList.add('stop-scroll');
 })
 
 closePopup.addEventListener('click',
 function() {
     popup.classList.remove('open');
+    document.body.classList.remove('stop-scroll');
 })
 
 
@@ -62,12 +65,13 @@ function() {
 let etherMenu = document.querySelector('.js-ether-menu');
 let buttonEther = document.querySelectorAll('.button--ether');
 let innerEther1 = document.querySelectorAll('.header__ether-wrapper');
+let vvv = document.querySelector('.header__button-ether');
 
 etherMenu.addEventListener('click',
 function() {
-    etherMenu.classList.toggle('active');
-    buttonEther.forEach(el=>{ el.classList.toggle('active'); })
+    etherMenu.classList.toggle('open');
     innerEther1.forEach(el=>{ el.classList.toggle('active'); })
+    vvv.classList.toggle('active');
 })
 
 
@@ -110,50 +114,12 @@ label.forEach(item =>{
 })
 
 
-
-// // свайпер для кнопок
-
-// let swiper = Swiper;
-// let initialization = false;
-
-// function swiperslide() {
-//     let mobile = window.matchMedia("(min-width: 0px) and (max-width: 767px)");
-
-//     if (mobile.matches) {
-//         if (!initialization) {
-//             initialization = true,
-//             swiper = new Swiper('.js-swiper'), {
-//                 slidesPerView: 'auto',
-//                 loop: true,
-
-//             }
-//         }
-//         else if (initialization){
-//             swiper.destroy;
-//             initialization = false;
-//         }
-//     }
-// }
-
-// swiperslide();
-
-
-
-
 let swiperAboutus = new Swiper('.js-about-us-swiper', {
-    // pagination: {
-    //     el: '.swiper-pagination',
-    //     type: 'fraction',
-    // },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
 
-    // pagination: {
-    //     el: '.swiper-pagination',
-    //     type: 'fraction',
-    // },
     breakpoints: {
         320: {
             slidesPerView: 2.5,
@@ -295,3 +261,18 @@ let swiperPlaylists = new Swiper('.js-swiper-playlists', {
         type: 'fraction',
     },
 });
+
+
+// ПОЯВЛЕНИЕ БЛОКОВ В СЕКЦИИ ПОДКАСТЫ
+
+// js-podcasts
+
+let podcastsButton = document.querySelector('.js-podcasts');
+let podcastsInfo = document.querySelectorAll('.podcasts__wrapper-big');
+
+podcastsButton.addEventListener('click',
+function() {
+    podcastsInfo.forEach(el=>{ el.classList.add('active'); })
+    // podcastsButton.classList.add('active');
+    }
+)
