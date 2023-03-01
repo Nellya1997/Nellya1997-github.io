@@ -715,16 +715,6 @@ body {
     z-index: 0;
 }
 
-/* .header__wrapper-bottom::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: var(--light-gray);
-} */
-
 .header__wrapper-navigation {
     align-items: center;
 }
@@ -2025,6 +2015,15 @@ body {
 .purchase__svg-768,
 .purchase__svg-320 {
     display: none;
+}
+
+.purchas__picture {
+    width: 100%;
+    display: block;
+}
+
+.purchas__picture img {
+    max-width: 100%;
 }
 
 /* ABOUT US */

@@ -15,13 +15,23 @@ let destination = document.querySelector('.navigation--wrapper-mobile');
 let bottom = document.querySelector('.navigation--header-bottom');
 let nazad = document.querySelector('.header__wrapper-bottom');
 
-if (document.documentElement.clientWidth < 567) {
+if (document.documentElement.clientWidth < 767) {
     destination.append(bottom);
 } else {
     nazad.append(bottom);
 }
 
-// destination.append(bottom);
+window.addEventListener("resize", function () {
+
+    // console.log('ф');
+
+    if (document.documentElement.clientWidth < 767) {
+        destination.append(bottom);
+    } else {
+        nazad.append(bottom);
+    }
+});
+
 
 // БУРГЕР
 

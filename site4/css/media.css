@@ -709,6 +709,10 @@
         display: flex;
     }
 
+    .navigation--header-bottom.active {
+        display: flex;
+    }
+
     .navigation--wrapper-mobile.active {
         visibility: visible;
         transform: translateX(0%);
@@ -728,6 +732,10 @@
     .navigation--wrapper-mobile .navigation__item {
         margin-right: 48px;
         margin-bottom: 64px;
+    }
+
+    .navigation--header-bottom {
+        display: flex;
     }
 
     .burger {
@@ -1282,6 +1290,7 @@
 
     .purchase__inner-picture {
         margin: 54px auto 51px auto;
+        max-width: 100%;
     }
 
     .purcharse__title {
@@ -1447,14 +1456,8 @@
     }
 }
 
+/* стили мобилки до таблетки */
 @media (max-width: 767px) {
-    .navigation__spiral {
-        display: none;
-    }
-}
-
-/* 567 */
-@media (max-width: 576px) {
 
     .popup__inner {
         width: 256px;
@@ -1539,6 +1542,10 @@
         z-index: 1;
     }
 
+    .navigation__spiral {
+        display: none;
+    }
+
     .container {
         padding: 0 32px;
         width: auto;
@@ -1594,10 +1601,6 @@
         position: static;
         padding-top: 15px;
         flex-direction: column;
-        /* background-color: var(--white);
-        position: absolute;
-        top: 42px;
-        left: 0; */
     }
 
     .button--ether:nth-child(2).active {
@@ -1696,6 +1699,10 @@
 
     .navigation__spiral {
         display: none;
+    }
+
+    .navigation--header-bottom.active {
+        display: flex;
     }
 
     /* ------------------- */
@@ -2497,5 +2504,13 @@
     .footer__copy {
         font-size: 12px;
         line-height: 12px;
+    }
+}
+
+/* 567 */
+@media (max-width: 567px) {
+
+    .navigation--header-bottom.active {
+        display: flex;
     }
 }

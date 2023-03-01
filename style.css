@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(90deg, #aea4e3, #d3ffe8);
+}
+
+.list {
+    list-style: none;
+    padding-top: 45px;
+    padding-left: 80px;
+}
+
+.list li {
+    margin-bottom: 25px;
+}
+
+
+.list li a {
+    text-decoration: none;
+    padding: 5px;
+    background-color: #FF77FF;
+    color: #fff;
+    font-size: 30px;
+}
