@@ -595,15 +595,16 @@ a {
         .sale__choice & {
             background-color: $white2;
             margin-right: 0;
+            width: 100%;
 
             &:first-child {
                 margin-bottom: 8px;
             }
         }
 
-        .sale__choice & .choices {
-            min-width: 264px;
-        }
+        // .sale__choice & .choices {
+        //     min-width: 264px;
+        // }
 
         & .choices .choices__inner {
             background-color: transparent;
@@ -1132,7 +1133,7 @@ a {
 
     .sale {
 
-        overflow-x: hidden;
+        // overflow-x: hidden;
 
         &__wrapper-icon {
             position: absolute;

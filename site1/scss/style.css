@@ -446,12 +446,10 @@ a {
   .sale__choice .select {
     background-color: #F0F0F0;
     margin-right: 0;
+    width: 100%;
   }
   .sale__choice .select:first-child {
     margin-bottom: 8px;
-  }
-  .sale__choice .select .choices {
-    min-width: 264px;
   }
   .select .choices .choices__inner {
     background-color: transparent;
@@ -868,9 +866,6 @@ a {
   }
   .popular__item:nth-child(3) .popular__info {
     margin-bottom: -9px;
-  }
-  .sale {
-    overflow-x: hidden;
   }
   .sale__wrapper-icon {
     position: absolute;
