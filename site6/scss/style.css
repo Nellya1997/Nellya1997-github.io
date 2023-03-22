@@ -695,7 +695,7 @@ ul {
     letter-spacing: 16px;
   }
   .decoration__range-wrapper {
-    width: calc(68% - 55px);
+    width: calc(68% - 25px);
   }
   .decoration__fail {
     max-height: 48px;
