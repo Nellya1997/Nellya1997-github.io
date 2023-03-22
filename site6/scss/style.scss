@@ -123,7 +123,7 @@ ul {
         transition: all 0.3s ease-in;
         background-color: white;
         width: 100vh;
-        padding: 30px 35px;
+        padding: 40px 35px;
 
         &__list {
             display: flex;
@@ -184,36 +184,44 @@ ul {
             }
         }
 
-        &[data-type*=select-one]::after,
         &[data-type*=select-one]::before {
-            background-color: $grey2;
             content: "";
             border: none;
-            width: 6px;
-            height: 1px;
-            transform: rotate(45deg);
-            margin: 0;
-        }
+            background: url('../img/select.svg') no-repeat;
 
-        &[data-type*=select-one]::before {
             position: absolute;
-            transform: rotate(-45deg);
-            width: 6px;
-            height: 1px;
+            width: 9px;
+            height: 5px;
             right: 14.5px;
             top: 50%;
             transition: all 0.1s ease-in;
+            background: url(../img/select.svg) no-repeat;
+            transition: all 0.3s ease-in;
+            opacity: 0;
+            transform: rotate(180deg);
+        }
+
+        &[data-type*=select-one]::after {
+            position: absolute;
+            width: 9px;
+            height: 5px;
+            right: 14.5px;
+            transition: all 0.3s ease-in;
+            top: 50%;
+            transition: all 0.1s ease-in;
+            background: url('../img/select.svg') no-repeat;
+            border: none;
         }
 
         &.is-focused.is-open::after {
-                border: none;
-                transform: rotate(135deg) translateY(-50%);
-                margin: 0;
-                top: 46%;
+            opacity: 0;
+            margin: 0;
         }
 
         &.is-focused.is-open::before {
-            transform: rotate(-135deg);
+            // transform: rotate(180deg);
+
+            opacity: 1;
         }
     }
 
