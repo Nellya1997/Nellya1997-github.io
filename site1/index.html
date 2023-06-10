@@ -2430,17 +2430,17 @@
                                         <span class="product-day__price-no-active">22&nbsp;000&nbsp;₽</span>
                                         <span class="product-day__sale">-45%</span>
                                     </div>
-                                    <div class="product-day__counter">
+                                    <div class="product-day__counter js-timer">
                                         <div class="product-day__wrapper-time">
-                                            <span>12</span>
+                                            <span id="hours">10</span>
                                             <span>часов</span>
                                         </div>
                                         <div class="product-day__wrapper-time">
-                                            <span>46</span>
+                                            <span id="minutes">35</span>
                                             <span>минут</span>
                                         </div>
                                         <div class="product-day__wrapper-time">
-                                            <span>51</span>
+                                            <span id="seconds">24</span>
                                             <span>секунд</span>
                                         </div>
                                     </div>
@@ -2455,11 +2455,14 @@
                                     <input class="product-day__input" type="radio">
                                 </div>
 
-                                <span class="product-day__size">РАЗМЕР
-                                    <span class="product-day__marker">
-                                        <span class="product-day__tooltip">Также как существующая теория напрямую зависит от&nbsp;экономической целесообразности принимаемых решений.</span>
-                                    </span>
-                                </span>
+                                <div class="product-day__wrapper-help">
+                                    <span class="product-day__size">РАЗМЕР</span>
+
+                                    <div class="product-day__help">
+                                        <span class="product-day__tooltip js-marker-content">Также как существующая теория напрямую зависит от&nbsp;экономической целесообразности принимаемых решений.</span>
+                                        <span class="product-day__marker js-marker"></span>
+                                    </div>
+                                </div>
 
                                 <div class="product-day__wrapper-size">
                                     <button class="button button--product-day">16,5</button>
@@ -2892,5 +2895,5 @@
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- <script src="/js/index.js"></script> -->
-    <script src="/site1/js/index.js"></script>
+    <script src="js/index.js"></script>
 </body>

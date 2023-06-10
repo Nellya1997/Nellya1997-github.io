@@ -173,4 +173,56 @@ let swiperddd = new Swiper('.js-fff', {
     // }
 });
 
+// таймер
 
+const deadline = '2023-06-20';
+
+function getTimeRemaining(endtime) {
+    const t = Date.parse(endtime) - Date.parse(new Date()),
+        hours = Math.floor((t / (1000 * 60 * 60) % 24)),
+        minutes = Math.floor((t / 1000 / 60) % 60),
+        seconds = Math.floor((t / 1000) % 60);
+
+    return {
+        'total': t,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds,
+    };
+}
+
+function setClock(selector, endtime) {
+    const timer = document.querySelector(selector),
+        hours = timer.querySelector('#hours'),
+        minutes = timer.querySelector('#minutes'),
+        seconds = timer.querySelector('#seconds'),
+        timeInterval = setInterval(updateClock, 1000);
+
+        function updateClock() {
+            const t = getTimeRemaining(endtime);
+
+            // days.innerHTML = t.days;
+            hours.innerHTML = t.hours;
+            minutes.innerHTML = t.minutes;
+            seconds.innerHTML = t.seconds;
+
+            if (t.total <= 0) {
+                clearInterval(timeInterval);
+            }
+        }
+}
+setClock('.js-timer', deadline);
+
+
+const marker = document.querySelector('.js-marker');
+const markerContent = document.querySelector('.js-marker-content');
+
+marker.addEventListener('mouseenter', ()=> {
+  markerContent.classList.add('open');
+})
+
+marker.addEventListener('mouseout', ()=> {
+  markerContent.classList.remove('open');
+})
+
+// mouseout

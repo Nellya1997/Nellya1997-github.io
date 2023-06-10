@@ -1278,8 +1278,9 @@ a {
     font-size: 12px;
     line-height: 12px;
     position: relative;
-    margin-bottom: 17px;
     display: inline-block;
+    align-self: center;
+    margin-right: 30px;
   }
   .product-day__marker {
     width: 18px;
@@ -1288,10 +1289,8 @@ a {
     background-color: #F0F0F0;
     display: inline-block;
     cursor: pointer;
-    position: absolute;
-    top: -3px;
-    right: -86px;
     transition: all 0.3s ease-in;
+    position: relative;
   }
   .product-day__marker::after {
     position: absolute;
@@ -1311,13 +1310,18 @@ a {
   .product-day__marker:hover {
     background-color: #D3D3D3;
   }
+  .product-day__help {
+    position: relative;
+  }
   .product-day__tooltip {
     font-size: 14px;
     line-height: 20px;
     position: absolute;
-    top: -228px;
-    left: -85px;
+    top: -222px;
+    left: -88px;
     background-color: #fff;
+    display: inline-block;
+    width: 184px;
     padding: 24px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     opacity: 0;
@@ -1334,8 +1338,9 @@ a {
     height: 8px;
     transform: rotate(45deg);
   }
-  .product-day__marker:hover .product-day__tooltip {
-    opacity: 1;
+  .product-day__wrapper-help {
+    display: flex;
+    margin-bottom: 17px;
   }
   .product-day__basket {
     display: flex;
@@ -1361,6 +1366,10 @@ a {
   }
   .product-day__item svg:last-child {
     margin-right: 0;
+  }
+  .open {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
   }
   .articles {
     position: relative;
