@@ -1,4 +1,4 @@
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".js-fff", {
     slidesPerView: 1,
     loop: true,
     spaceBetween: 50,
@@ -7,30 +7,32 @@ const swiper = new Swiper(".swiper", {
     controller: {
       inverse: true,
     },
-      pagination: {
-          el: ".swiper-pagination"
-      },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
       navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
       }
   });
 
-  const swiperPlay = new Swiper(".swiper--play", {
+  const swiperPlayA = new Swiper(".swiper--play", {
     loop: true,
     slidesPerView: 1,
+    autoplay: {
+      delay: 5000,
+    },
     spaceBetween: 50,
       centeredSlides:true,
     controller: {
       inverse: true,
     },
     spaceBetween: 50,
-    autoplay: {
-      delay: 5000,
+    pagination: {
+      el: '.swiper-pagination2',
+      clickable: true,
     },
-      pagination: {
-          el: ".swiper-pagination"
-      },
       navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
