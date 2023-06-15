@@ -1,8 +1,8 @@
 
 const swiper = new Swiper('.swiper__decisions', {
-    autoplay: {
-        delay: 3000,
-    },
+    // autoplay: {
+    //     delay: 3000,
+    // },
     speed: 400,
     spaceBetween: 100,
     direction: 'horizontal',
