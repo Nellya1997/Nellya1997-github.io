@@ -66,8 +66,8 @@ ul {
        object-fit: contain;
   }
   .picture--works img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .picture--works {
     width: 100%;
