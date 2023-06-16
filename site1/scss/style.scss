@@ -105,6 +105,7 @@ a {
 
         &--tabs {
             background-color: $white2;
+            color: $dark;
             font-size: 14px;
             line-height: 14px;
             border-radius: 21px;
@@ -224,8 +225,9 @@ a {
             line-height: 14px;
             padding: 9px 11px;
             margin-right: 8px;
-            width: 50px;
+            width: calc(20% - 7px);
             background-color: $white;
+            color: $dark1;
             border: 1px solid $grey2;
             transition: all 0.3s ease-in;
             margin-bottom: 10px;
@@ -238,9 +240,9 @@ a {
                 margin-right: 0;
             }
 
-            &:nth-last-of-type(-n+2) {
-                margin-bottom: 0;
-            }
+            // &:nth-last-of-type(-n+2) {
+            //     margin-bottom: 0;
+            // }
 
             &:hover {
                 border: 1px solid $dark;
@@ -261,6 +263,7 @@ a {
         &--basket {
             font-family: 'Inter';
             font-weight: 500;
+            color: $dark1;
             font-size: 14px;
             line-height: 14px;
             padding: 21px 0;
@@ -368,6 +371,7 @@ a {
             display: flex;
             align-items: center;
             transition: all 0.3s ease-in;
+            color: $dark1;
 
             & svg {
                 fill: $grey4;
@@ -802,7 +806,8 @@ a {
             &__contact {
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 28px;
+                // margin-bottom: 28px;
+                margin-bottom: 16px;
             }
 
             &__search-input {
@@ -815,8 +820,9 @@ a {
             }
 
             &__contact .select {
-                margin-bottom: 59px;
+                // margin-bottom: 103px;
                 z-index: 10;
+                margin-bottom: 20px;
             }
 
             &__select-wrapper {
@@ -828,9 +834,9 @@ a {
             }
 
             &__lk {
-                position: absolute;
-                bottom: 54px;
-                left: 0;
+                // position: absolute;
+                // bottom: 54px;
+                // left: 0;
                 padding-right: 22px;
             }
 
@@ -846,7 +852,7 @@ a {
             }
 
             &__login {
-                margin-bottom: 20px;
+                margin-bottom: 55px;
             }
 
             &__bottom .navigation {
@@ -858,6 +864,7 @@ a {
             &__search {
                 padding: 0;
                 padding-right: 20px;
+                opacity: 0;
             }
 
             &__lk ul {
@@ -866,7 +873,7 @@ a {
             }
 
             &__bottom .navigation__list li:not(:last-child) {
-                margin-bottom: 40px;
+                margin-bottom: 27px;
             }
 
             &__bottom .navigation__list li {
@@ -1218,7 +1225,6 @@ a {
 
         &__wrapper-content {
             display: none;
-            overflow-x: revert;
 
             &.active {
                 display: block;
