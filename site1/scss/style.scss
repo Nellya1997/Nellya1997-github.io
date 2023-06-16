@@ -505,6 +505,7 @@ a {
         line-height: 40px;
         margin: 0;
         margin-bottom: 41px;
+        // text-align: center;
 
         &--hidden {
             display: none;
@@ -1190,6 +1191,10 @@ a {
                 border-bottom: none;
             }
 
+            &:last-child:hover {
+                box-shadow: none;
+            }
+
             &:hover .sale__wrapper-card {
                 border-color: transparent;
             }
@@ -1213,11 +1218,11 @@ a {
 
         &__wrapper-content {
             display: none;
-            overflow-y: visible;
             overflow-x: revert;
 
             &.active {
                 display: block;
+                padding-bottom: 109px;
             }
 
             &::after,

@@ -915,6 +915,9 @@ a {
     border-bottom: #fff;
     border-bottom: none;
   }
+  .sale__list li:last-child:hover {
+    box-shadow: none;
+  }
   .sale__list li:hover .sale__wrapper-card {
     border-color: transparent;
   }
@@ -932,11 +935,11 @@ a {
   }
   .sale__wrapper-content {
     display: none;
-    overflow-y: visible;
     overflow-x: revert;
   }
   .sale__wrapper-content.active {
     display: block;
+    padding-bottom: 109px;
   }
   .sale__wrapper-content::after, .sale__wrapper-content::before {
     content: ".";
