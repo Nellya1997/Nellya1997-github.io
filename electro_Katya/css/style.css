@@ -133,6 +133,12 @@ ul {
   line-height: 15px;
   font-weight: 700;
 }
+.navigation__item {
+  margin-right: 12px;
+}
+.navigation__item:last-child {
+  margin-right: 0;
+}
 
 .link {
   text-decoration: none;
@@ -221,7 +227,7 @@ ul {
 .circle {
   width: 54px;
   height: 54px;
-  background-color: #fdecff;
+  background: linear-gradient(to right, #fdecff, 58%, transparent);
   border-radius: 50%;
 }
 
