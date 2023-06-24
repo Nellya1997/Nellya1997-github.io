@@ -44,6 +44,8 @@ ul {
 
 .header {
   padding-top: 47px;
+  overflow-x: hidden;
+  min-height: 87px;
 }
 .header__wrapper {
   display: flex;
@@ -145,7 +147,7 @@ ul {
   width: 100%;
   position: absolute;
   right: -39px;
-  top: 9px;
+  top: -12px;
 }
 .picture--atelier::after {
   content: "";
@@ -231,7 +233,7 @@ ul {
 .atelier {
   margin-bottom: 60px;
   position: relative;
-  padding-top: 91px;
+  padding-top: 21px;
   overflow-x: hidden;
 }
 .atelier__wrapper {
@@ -239,7 +241,7 @@ ul {
   justify-content: space-between;
   position: relative;
   max-width: 52%;
-  margin-bottom: 320px;
+  margin-bottom: 235px;
 }
 .atelier__wrapper-content {
   position: relative;
