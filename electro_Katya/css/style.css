@@ -109,11 +109,11 @@ ul {
   position: absolute;
   top: 55px;
   z-index: 1;
-  left: 21px;
+  left: 0px;
   transform: translateX(120%);
   visibility: hidden;
   transition: all 0.4s ease-in;
-  width: calc(100% - 42px);
+  width: 100%;
 }
 .navigation.open {
   transform: none;
