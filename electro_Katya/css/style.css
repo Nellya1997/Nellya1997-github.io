@@ -162,7 +162,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, transparent, 65%, #fff);
+  background-image: linear-gradient(to bottom, transparent, 65%, #FDFAFF);
   z-index: 0;
 }
 .picture--atelier img {
