@@ -14,40 +14,29 @@
 //     })
 //     });
 
-const swiper = new Swiper(".swiper--work", {
+const swiper1 = new Swiper(".swiper", {
     slidesPerView: 1,
     loop: true,
     spaceBetween: 30,
-    // centeredSlides:true,
     spaceBetween: 50,
-    // controller: {
-    //   inverse: true,
-    // },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
     navigation: {
-        nextEl: ".swiper-button-next2",
-        prevEl: ".swiper-button-prev2"
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
     }
 });
 
-const swiper1 = new Swiper(".swiper--masters", {
-    slidesPerView: 1,
-    loop: true,
-    spaceBetween: 30,
-    // centeredSlides:true,
-    spaceBetween: 50,
-    // controller: {
-    //   inverse: true,
-    // },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next1",
-        prevEl: ".swiper-button-prev1"
-    }
-});
+// burger
+
+let burger = document.querySelector('.burger');
+let navigation = document.querySelector('.navigation');
+let body = document.querySelector('body');
+
+burger.addEventListener('click', ()=> {
+    navigation.classList.toggle('open');
+    burger.classList.toggle('open');
+    body.classList.toggle('stop-scroll');
+})
