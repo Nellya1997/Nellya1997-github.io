@@ -144,10 +144,10 @@ ul {
   width: 100%;
 }
 .picture--atelier {
-  width: 100%;
+  width: 92%;
   position: absolute;
-  right: -39px;
-  top: -12px;
+  right: 0px;
+  top: 0px;
 }
 .picture--atelier::after {
   content: "";
@@ -234,7 +234,6 @@ ul {
   margin-bottom: 60px;
   position: relative;
   padding-top: 21px;
-  overflow-x: hidden;
 }
 .atelier__wrapper {
   display: flex;
