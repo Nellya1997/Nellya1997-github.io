@@ -49,6 +49,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -59,6 +60,9 @@ ul {
 }
 
 .burger {
+  padding: 0;
+  background-color: transparent;
+  border: none;
   width: 25px;
   height: 20px;
   position: relative;
@@ -101,7 +105,7 @@ ul {
 
 .navigation {
   position: absolute;
-  top: 97px;
+  top: 55px;
   z-index: 1;
   left: 21px;
   transform: translateX(120%);
@@ -228,6 +232,7 @@ ul {
   margin-bottom: 60px;
   position: relative;
   padding-top: 91px;
+  overflow-x: hidden;
 }
 .atelier__wrapper {
   display: flex;
@@ -246,7 +251,6 @@ ul {
   line-height: 21px;
   color: #7a7dbc;
   margin-bottom: 16px;
-  margin-left: -15px;
   text-align: left;
 }
 .atelier__content {
