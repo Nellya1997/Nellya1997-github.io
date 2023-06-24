@@ -247,6 +247,7 @@ ul {
   color: #7a7dbc;
   margin-bottom: 16px;
   margin-left: -15px;
+  text-align: left;
 }
 .atelier__content {
   font-size: 15px;
