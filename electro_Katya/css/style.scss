@@ -71,7 +71,6 @@ ul {
         justify-content: space-between;
         align-items: center;
         position: relative;
-        // overflow-x: hidden;
     }
 }
 
@@ -168,6 +167,7 @@ ul {
         font-size: 12px;
         line-height: 15px;
         font-weight: 700;
+        color: $purple;
     }
 
     &__item {
@@ -201,7 +201,7 @@ ul {
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(to bottom, transparent, 65%, $light-pink1);
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), 65%, $light-pink1);
             z-index: 0;
         }
 

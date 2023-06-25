@@ -38,7 +38,7 @@ let body = document.querySelector('body');
 burger.addEventListener('click', ()=> {
     navigation.classList.toggle('open');
     burger.classList.toggle('open');
-    body.classList.toggle('stop-scroll');
+    // body.classList.toggle('stop-scroll');
 })
 
 //FAQ - accorderon
