@@ -402,19 +402,24 @@ ul {
 .FAQ {
   margin-bottom: 60px;
 }
+.FAQ__wrap {
+  margin-bottom: 15px;
+}
 .FAQ__wrap .accordion {
   font-size: 16px;
   line-height: 20px;
   color: #7a7dbc;
   background-color: white;
   cursor: pointer;
-  padding: 18px;
+  padding: 18px 18px 18px 53px;
   width: 100%;
   text-align: left;
   border: none;
   outline: none;
   transition: 0.4s;
   position: relative;
+  box-shadow: 0px -5px 17px #eedcfa;
+  border-radius: 9px;
 }
 .FAQ__wrap p {
   font-size: 15px;
@@ -427,6 +432,7 @@ ul {
   flex-direction: column;
   gap: 10px;
   padding: 0 18px;
+  padding-top: 17px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
@@ -436,8 +442,9 @@ ul {
   content: "➕";
   font-size: 23px;
   position: absolute;
-  left: -25px;
-  top: 14px;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .FAQ__wrap .active:before {
   content: "➖";
