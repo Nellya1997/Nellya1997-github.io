@@ -403,9 +403,6 @@ ul {
 }
 
 /*    FAQ section          */
-.FAQ {
-  margin-bottom: 60px;
-}
 .FAQ__wrap {
   margin-bottom: 15px;
 }
@@ -574,7 +571,7 @@ ul {
   padding-bottom: 10px;
 }
 .reviews__slider .swiper {
-  padding-bottom: 39px;
+  padding-bottom: 46px;
 }
 .reviews__slider-img {
   width: 236px;

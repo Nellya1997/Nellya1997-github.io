@@ -487,7 +487,6 @@ ul {
 
 /*    FAQ section          */
 .FAQ {
-    margin-bottom: 60px;
 
     @mixin flexCol {
         display: flex;
@@ -707,7 +706,7 @@ ul {
         padding-bottom: 10px;
 
         & .swiper {
-            padding-bottom: 39px;
+            padding-bottom: 46px;
         }
     }
 
