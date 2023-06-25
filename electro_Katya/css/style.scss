@@ -15,7 +15,7 @@ $pink1: #eedcfa;
 $pink2: #969ae4;
 $white: #fff;
 $light-pink: #fdecff;
-$light-pink1: #FDFAFF;
+$light-pink1: #fdfaff;
 
 // переменная со шрифтом
 
@@ -35,8 +35,6 @@ body {
     overflow-x: hidden;
     color: $dark;
 }
-
-
 
 main {
     margin: 0 auto;
@@ -61,7 +59,6 @@ ul {
 }
 
 .header {
-
     padding-top: 47px;
     overflow-x: hidden;
     min-height: 124px;
@@ -82,7 +79,6 @@ ul {
 }
 
 .burger {
-
     padding: 0;
     background-color: transparent;
     border: none;
@@ -112,7 +108,6 @@ ul {
     }
 
     &.open {
-
         & .burger__line:first-child {
             left: 25%;
             top: 50%;
@@ -136,7 +131,6 @@ ul {
     }
 }
 
-
 .navigation {
     position: absolute;
     top: 55px;
@@ -146,9 +140,12 @@ ul {
     visibility: hidden;
     transition: all 0.4s ease-in;
     width: 100%;
-    box-shadow: 0px 1px 6px 6px #eedcfa;
-    padding: 10px 2px;
     border-radius: 9px;
+    background: rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0px 2px 3px 0px rgba(238, 220, 250, 0.78);
+    backdrop-filter: blur(2.5px);
+    padding: 5px;
 
     &.open {
         transform: none;
@@ -214,7 +211,6 @@ ul {
         }
     }
 
-
     & img {
         width: 100%;
         height: 100%;
@@ -268,7 +264,6 @@ ul {
     }
 }
 
-
 .subtitle {
     font-size: 15px;
     line-height: 15px;
@@ -283,7 +278,7 @@ ul {
 .circle {
     width: 54px;
     height: 54px;
-    background: linear-gradient(to right, $light-pink, 58% , transparent);
+    background: linear-gradient(to right, $light-pink, 58%, transparent);
     border-radius: 50%;
 }
 
@@ -334,10 +329,9 @@ ul {
     }
 
     &__link {
-        padding: 9px 32px;
+        padding: 9px 27px;
         background-color: $pink;
         border-radius: 50px;
-        padding: 7px 38px;
         color: $white;
     }
 
@@ -438,23 +432,38 @@ ul {
     &__swiper-wrapper {
         padding-bottom: 36px;
     }
-
+    &__wrapper-info {
+    }
+}
+.services {
     &__swiper-wrapper .swiper-pagination,
     &__swiper-wrapper .swiper-button-next,
     &__swiper-wrapper .swiper-button-prev {
         bottom: 11px;
         top: auto;
     }
-
-    &__wrapper-info {
-    }
 }
 
+.swiper__pagination,
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+}
+
+.swiper__pagination,
 .swiper {
     margin: 0 auto;
     padding-bottom: 78px;
 }
 
+.swiper__pagination .swiper-button-prev,
+.swiper__pagination .swiper-button-next,
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
     width: 39px;
@@ -471,11 +480,12 @@ ul {
     }
 }
 
+.swiper__pagination .swiper-button-next,
 .swiper .swiper-button-next {
     right: calc(50% - 63px);
     left: auto;
 }
-
+.swiper__pagination .swiper-pagination-bullet,
 .swiper .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
@@ -487,7 +497,7 @@ ul {
 
 /*    FAQ section          */
 .FAQ {
-
+    
     @mixin flexCol {
         display: flex;
         flex-direction: column;
@@ -560,7 +570,6 @@ ul {
     }
 }
 .price {
-
     &__title {
         margin-bottom: 23px;
     }
@@ -594,16 +603,19 @@ ul {
     }
 
     &__category-item {
-        font-weight: 500;
         font-size: 16px;
-        line-height: 16px;
+        font-weight: 500;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        
     }
 
     &__category-item p {
         padding-bottom: 5px;
+    }
+    &__category-item span {
+        line-height: 1.4;
     }
 }
 
@@ -659,32 +671,32 @@ ul {
 
     // Слайдер офис
     // .about {
-        &__atelier {
-            margin: 0 auto;
-            padding-bottom: 100px;
-        }
+    &__atelier {
+        margin: 0 auto;
+        padding-bottom: 100px;
+    }
 
-        // &__atelier .swiper {
-        //     // max-width: 280px;
-        //     padding-bottom: 48px;
-        //     margin: 0 auto;
-        // }
+    // &__atelier .swiper {
+    //     // max-width: 280px;
+    //     padding-bottom: 48px;
+    //     margin: 0 auto;
+    // }
 
-        &__workers .swiper {
-            padding-bottom: 85px;
-        }
+    &__workers .swiper {
+        padding-bottom: 85px;
+    }
 
-        &__atelier-img {
-            width: 236px;
-            height: 160px;
-            border-radius: 9px;
-            margin-bottom: 10px;
-        }
+    &__atelier-img {
+        width: 236px;
+        height: 160px;
+        border-radius: 9px;
+        margin-bottom: 10px;
+    }
 
-        &__atelier-text {
-            text-align: center;
-            font-weight: 500;
-        }
+    &__atelier-text {
+        text-align: center;
+        font-weight: 500;
+    }
     // }
 }
 
@@ -728,7 +740,7 @@ ul {
         .footer__title {
             margin-bottom: 30px;
         }
-        
+
         .footer__subtitle {
             padding: 4px 10px;
             margin-bottom: 20px;
@@ -747,10 +759,11 @@ ul {
                 font-size: 12px;
                 line-height: 14.63px;
 
+                
+
                 &.footer__contacts--phone {
-                    padding: 5px 10px;
-                    width: 150px;
-                    column-gap: 5px;
+                    padding: 0px 6px;
+                    width: 123px;
                     &.col-2 {
                         display: grid;
                         grid-template-columns: repeat(2, max-content);
@@ -765,22 +778,26 @@ ul {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 45px;
-                    height: 35px;
+                    width: 37px;
+                    height: 30px;
+                }
+                img {
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }
         .footer__contacts--adress {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 15px 0;
-                font-size: 12px;
-                font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 12px;
+            font-weight: 600;
 
-                img {
-                    margin-right: 5px;
-                }
+            img {
+                margin-right: 5px;
+            }
         }
     }
     iframe {
@@ -891,5 +908,3 @@ ul {
     .title {
     }
 }
-
-

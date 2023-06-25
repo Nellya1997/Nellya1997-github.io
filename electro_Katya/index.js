@@ -14,32 +14,47 @@
 //     })
 //     });
 
-const swiper1 = new Swiper(".swiper", {
-    slidesPerView: 1,
-    loop: true,
-    spaceBetween: 30,
-    spaceBetween: 50,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    }
+const swiper1 = new Swiper('.swiper', {
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 30,
+  spaceBetween: 50,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
 
+const swiper2 = new Swiper('.swiper__pagination', {
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 30,
+  spaceBetween: 50,
+  pagination: {
+    el: '.swiper__pagination-dynamic--bullets',
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 // burger
 
 let burger = document.querySelector('.burger');
 let navigation = document.querySelector('.navigation');
 let body = document.querySelector('body');
 
-burger.addEventListener('click', ()=> {
-    navigation.classList.toggle('open');
-    burger.classList.toggle('open');
-    body.classList.toggle('stop-scroll');
-})
+burger.addEventListener('click', () => {
+  navigation.classList.toggle('open');
+  burger.classList.toggle('open');
+  body.classList.toggle('stop-scroll');
+});
 
 // при нажатии на бургер body получает stop-scroll: при нажатии на ссылку
 // будем убирать .scroll-stop у body и также убирать менюшку
