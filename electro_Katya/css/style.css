@@ -636,9 +636,22 @@ ul {
     max-width: 600px;
     margin: 0 auto;
   }
-  .picture--about {
-    height: 323px;
-    max-width: 445px;
+  .atelier__advertisement {
+    max-width: 364px;
+  }
+  .atelier__title {
+    font-size: 46px;
+    line-height: 30px;
+  }
+  .atelier__content {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .atelier__info {
+    margin-bottom: 77px;
+  }
+  .atelier__link {
+    padding: 14px 53px;
   }
 }
 @media (min-width: 1280px) {

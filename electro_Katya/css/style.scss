@@ -389,15 +389,10 @@ ul {
         flex-direction: column;
     }
 
-    // &__title {
-    //     margin-bottom: 25px;
-    // }
-
     &__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        // padding: 0 28px;
         box-shadow: 0px 2px 5px #eedcfa;
         margin-bottom: 27px;
         padding: 0 5px;
@@ -410,7 +405,6 @@ ul {
     }
 
     &__content {
-        // font-size: 11px;
         display: block;
         text-align: center;
         line-height: 10px;
@@ -437,10 +431,6 @@ ul {
         margin: 0 auto;
         margin-bottom: 45px;
     }
-
-    // &__content-swiper {
-    //     max-width: 192px;
-    //     display: inline-block;
 
     &__swiper-wrapper {
         padding-bottom: 36px;
@@ -824,53 +814,30 @@ ul {
         max-width: 600px;
         margin: 0 auto;
     }
-    .header {
-    }
-
-    .logo {
-    }
-    .navigation {
-    }
-    .list {
-        &__item {
-        }
-
-        &--navigation {
-        }
-    }
 
     .atelier {
-        &__wrapper {
-        }
-
-        &__wrapper-content {
+        &__advertisement {
+            max-width: 364px;
         }
 
         &__title {
+            font-size: 46px;
+            line-height: 30px;
         }
 
         &__content {
+            font-size: 17px;
+            line-height: 22px;
+        }
+
+        &__info {
+            margin-bottom: 77px;
         }
 
         &__link {
+            padding: 14px 53px;
         }
     }
-    .title {
-    }
-
-    .picture {
-        &--about {
-            height: 323px;
-            max-width: 445px;
-        }
-    }
-
-    // .about {
-
-    //     & .swiper {
-    //         max-width: 460px;
-    //     }
-    // }
 }
 
 @media (min-width: 1280px) {
