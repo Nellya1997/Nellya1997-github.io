@@ -29,6 +29,18 @@ const swiper1 = new Swiper(".swiper", {
     }
 });
 
+// // burger
+
+// let burger = document.querySelector('.burger');
+// let navigation = document.querySelector('.navigation');
+// let body = document.querySelector('body');
+
+// burger.addEventListener('click', ()=> {
+//     navigation.classList.toggle('open');
+//     burger.classList.toggle('open');
+//     // body.classList.toggle('stop-scroll');
+// })
+
 // burger
 
 let burger = document.querySelector('.burger');
@@ -38,8 +50,23 @@ let body = document.querySelector('body');
 burger.addEventListener('click', ()=> {
     navigation.classList.toggle('open');
     burger.classList.toggle('open');
-    // body.classList.toggle('stop-scroll');
+    body.classList.toggle('stop-scroll');
 })
+
+// при нажатии на бургер body получает stop-scroll: при нажатии на ссылку
+// будем убирать .scroll-stop у body и также убирать менюшку
+let anchors = Array.from(document.querySelectorAll('.navigation__item'));
+
+(function() {
+    anchors.forEach((el) => {
+        el.addEventListener('click', function() {
+            console.log('body class removed');
+            body.classList.remove('stop-scroll');
+            navigation.classList.toggle('open');
+            burger.classList.toggle('open');
+        })
+    })
+})();
 
 //FAQ - accorderon
 let acc = document.getElementsByClassName("accordion");

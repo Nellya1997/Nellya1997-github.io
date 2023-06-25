@@ -443,7 +443,8 @@ ul {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-.FAQ__wrap .accordion::before {
+.FAQ__wrap .accordion::before,
+.FAQ__wrap .accordion::after {
   content: "";
   width: 25px;
   height: 4px;
@@ -454,8 +455,12 @@ ul {
   top: 50%;
   transform: translateY(-50%);
 }
-.FAQ__wrap .active:before {
-  content: "➖";
+.FAQ__wrap .accordion::after {
+  transform: rotate(90deg) translate(-6%, 0%);
+  transition: all 0.2s ease-in;
+}
+.FAQ__wrap .accordion.active::after {
+  opacity: 0;
 }
 
 .price__title {

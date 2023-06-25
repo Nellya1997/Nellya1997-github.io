@@ -537,9 +537,8 @@ ul {
             overflow: hidden;
             transition: max-height 0.2s ease-out;
         }
-        .accordion::before {
-            // content: '\02795';
-            // font-size: 23px;
+        .accordion::before,
+        .accordion::after {
             content: '';
             width: 25px;
             height: 4px;
@@ -549,12 +548,15 @@ ul {
             left: 8px;
             top: 50%;
             transform: translateY(-50%);
-            // -webkit-text-fill-color: $purple;
-            // color: $purple;
         }
 
-        .active:before {
-            content: "\2796";
+        .accordion::after {
+            transform: rotate(90deg) translate(-6%, 0%);
+            transition: all 0.2s ease-in;
+        }
+
+        .accordion.active::after {
+            opacity: 0;
         }
     }
 }
