@@ -435,6 +435,7 @@ ul {
     }
     &__wrapper-center {
         margin: 0 auto;
+        margin-bottom: 45px;
     }
 
     // &__content-swiper {
@@ -491,6 +492,64 @@ ul {
     }
 }
 
+/*    FAQ section          */
+.FAQ {
+    margin-bottom: 60px;
+
+    @mixin flexCol {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__wrap {
+
+        .accordion {
+            font-size: 16px;
+            line-height: 20px;
+            color: $purple;
+            background-color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            position: relative;
+        }
+        .active, .accordion:hover {
+            //background-color: #ccc;
+        }
+
+        & p {
+            font-size: 15px;
+            line-height: 17px;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .panel {
+            @include flexCol;
+
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        .accordion::before {
+            content: '\02795';
+            font-size: 23px;
+            position: absolute;
+            left: -25px;
+            top: 14px;
+        }
+
+        .active:before {
+            content: "\2796"; 
+        }
+    }
+}
 .price {
 
     &__title {

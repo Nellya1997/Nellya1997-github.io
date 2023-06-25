@@ -355,6 +355,7 @@ ul {
 }
 .services__wrapper-center {
   margin: 0 auto;
+  margin-bottom: 45px;
 }
 .services__swiper-wrapper {
   padding-bottom: 36px;
@@ -395,6 +396,51 @@ ul {
 }
 .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #7a7dbc;
+}
+
+/*    FAQ section          */
+.FAQ {
+  margin-bottom: 60px;
+}
+.FAQ__wrap .accordion {
+  font-size: 16px;
+  line-height: 20px;
+  color: #7a7dbc;
+  background-color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  position: relative;
+}
+.FAQ__wrap p {
+  font-size: 15px;
+  line-height: 17px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.FAQ__wrap .panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.FAQ__wrap .accordion::before {
+  content: "➕";
+  font-size: 23px;
+  position: absolute;
+  left: -25px;
+  top: 14px;
+}
+.FAQ__wrap .active:before {
+  content: "➖";
 }
 
 .price__title {
