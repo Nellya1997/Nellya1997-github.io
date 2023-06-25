@@ -480,16 +480,18 @@ ul {
   box-shadow: 0px 2px 3px 0px rgba(238, 220, 250, 0.78);
 }
 .price__category-title {
-  text-align: center;
   font-weight: 600;
   font-size: 16px;
+  text-align: center;
   padding-bottom: 15px;
 }
 .price__category-item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  font-weight: 500;
 }
 .price__category-item p {
   padding-bottom: 5px;

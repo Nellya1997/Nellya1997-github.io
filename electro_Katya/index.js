@@ -29,18 +29,6 @@ const swiper1 = new Swiper(".swiper", {
     }
 });
 
-// // burger
-
-// let burger = document.querySelector('.burger');
-// let navigation = document.querySelector('.navigation');
-// let body = document.querySelector('body');
-
-// burger.addEventListener('click', ()=> {
-//     navigation.classList.toggle('open');
-//     burger.classList.toggle('open');
-//     // body.classList.toggle('stop-scroll');
-// })
-
 // burger
 
 let burger = document.querySelector('.burger');
