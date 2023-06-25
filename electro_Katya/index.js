@@ -66,8 +66,12 @@ for (i = 0; i < acc.length; i++) {
     let panel = this.nextElementSibling;
     if (panel.style.maxHeight){
       panel.style.maxHeight = null;
+      panel.style.paddingTop = '0' + 'px';
+      panel.style.paddingBottom = '0' + 'px';
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.paddingTop = '10' + 'px';
+      panel.style.paddingBottom = '10' + 'px';
     }
   });
 }

@@ -433,8 +433,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 0 18px;
-  padding-top: 17px;
   background-color: white;
   max-height: 0;
   overflow: hidden;
