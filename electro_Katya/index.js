@@ -1,18 +1,4 @@
-// let swiperWork = document.querySelectorAll('.swiper');
 
-// swiperWork.forEach(function (work){
-//     let swipers = new Swiper(work, {
-//         pagination: {
-//             el: '.swiper-pagination',
-//             clickable: true,
-//         },
-//         spaceBetween: 30,
-//         navigation: {
-//             nextEl: '.swiper-button-next',
-//             prevEl: '.swiper-button-prev',
-//         },
-//     })
-//     });
 
 const swiper1 = new Swiper('.swiper', {
   slidesPerView: 1,
@@ -29,21 +15,6 @@ const swiper1 = new Swiper('.swiper', {
   },
 });
 
-const swiper2 = new Swiper('.swiper__pagination', {
-  slidesPerView: 1,
-  loop: true,
-  spaceBetween: 30,
-  spaceBetween: 50,
-  pagination: {
-    el: '.swiper__pagination-dynamic--bullets',
-    clickable: true,
-    dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
 // burger
 
 let burger = document.querySelector('.burger');
