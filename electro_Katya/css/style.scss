@@ -386,6 +386,10 @@ ul {
         flex-direction: column;
     }
 
+    &__title {
+        margin-bottom: 34px;
+    }
+
     &__list {
         display: flex;
         flex-wrap: wrap;

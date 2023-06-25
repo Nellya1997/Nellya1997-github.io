@@ -327,6 +327,9 @@ ul {
   display: flex;
   flex-direction: column;
 }
+.services__title {
+  margin-bottom: 34px;
+}
 .services__list {
   display: flex;
   flex-wrap: wrap;
