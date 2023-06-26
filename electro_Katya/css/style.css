@@ -191,6 +191,8 @@ ul {
   border-radius: 14px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 .picture--services {
   margin-bottom: 5px;
