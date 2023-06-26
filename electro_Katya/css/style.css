@@ -172,6 +172,18 @@ ul {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), 65%, #fdfaff);
   z-index: 0;
 }
+.picture--atelier::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  top: calc(0% + 311px);
+  left: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 311px);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.001), 27%, #fdfaff);
+  z-index: 1;
+}
 .picture--atelier img {
   width: 100%;
   height: 100%;
