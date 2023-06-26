@@ -224,11 +224,11 @@ ul {
 
         & img {
             border-radius: 14px;
+            object-fit: cover;
         }
     }
 
     &--services {
-        // max-height: 100px;
         margin-bottom: 5px;
     }
 }
@@ -291,7 +291,6 @@ ul {
     margin-bottom: 60px;
     position: relative;
     padding-top: 21px;
-    // overflow-x: hidden;
 
     &__wrapper {
         display: flex;
@@ -503,7 +502,6 @@ ul {
     }
 }
 
-/*    FAQ section          */
 .FAQ {
     @mixin flexCol {
         display: flex;
@@ -626,7 +624,6 @@ ul {
     }
 }
 
-// О нас
 
 .about {
     margin-top: 100px;
@@ -725,7 +722,7 @@ ul {
         padding-bottom: 10px;
 
         & .swiper {
-            padding-bottom: 46px;
+            padding-bottom: 30px;
         }
     }
 

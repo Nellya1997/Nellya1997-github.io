@@ -189,6 +189,8 @@ ul {
 }
 .picture--about img {
   border-radius: 14px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .picture--services {
   margin-bottom: 5px;
@@ -428,7 +430,6 @@ ul {
   background-color: #7a7dbc;
 }
 
-/*    FAQ section          */
 .FAQ__wrap {
   margin-bottom: 15px;
 }
@@ -598,7 +599,7 @@ ul {
   padding-bottom: 10px;
 }
 .reviews__slider .swiper {
-  padding-bottom: 46px;
+  padding-bottom: 30px;
 }
 .reviews__slider-img {
   width: 236px;
