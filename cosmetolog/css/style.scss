@@ -178,7 +178,7 @@ h2 {
 // Info
 
 .info {
-    margin-bottom: 82px;
+    margin-bottom: 52px;
 
     &__inner {
         min-width: 351px;
@@ -459,6 +459,10 @@ h2 {
         margin-bottom: 30px;
     }
 
+    &__btn {
+        margin-bottom: 30px;
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
@@ -529,10 +533,12 @@ h2 {
     }
 
     &__item-answer {
-        font-size: 12px;
-        font-family: Roboto;
+        font-size: 16px;
+        line-height: 16px;
+        font-family: 'Roboto';
         font-weight: 300;
-        line-height: 1.4;
+        // line-height: 1.4;
+        padding-top: 15px;
         color: $dark;
         padding-left: 60px;
         // animation: ani 0.5s forwards;
