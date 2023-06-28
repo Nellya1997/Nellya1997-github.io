@@ -445,8 +445,11 @@ h2 {
   max-height: 70px;
 }
 .faq__item-answer p {
-  position: relative;
+  font-size: 16px;
+  line-height: 16px;
   margin: 0;
+  margin-bottom: 14px;
+  position: relative;
   padding: 0 0 0 15px;
 }
 .faq__item-answer p::before {

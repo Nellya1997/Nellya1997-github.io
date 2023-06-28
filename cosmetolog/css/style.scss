@@ -536,8 +536,13 @@ h2 {
     }
 
     &__item-answer p {
-        position: relative;
+        // position: relative;
+        font-size: 16px;
+        line-height: 16px;
         margin: 0;
+        // padding: 0 0 0 15px;
+        margin-bottom: 14px;
+        position: relative;
         padding: 0 0 0 15px;
 
         &::before {
