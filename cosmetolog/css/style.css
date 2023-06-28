@@ -291,14 +291,15 @@ h2 {
   color: #de2448;
   font-size: 20px;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 .menu__item-desc {
-  text-align: center;
-  max-width: 170px;
-  font-size: 12px;
+  font-size: 17px;
+  line-height: 17px;
   font-family: Roboto;
   font-weight: 300;
+  text-align: center;
+  max-width: 170px;
   text-transform: lowercase;
   margin-bottom: 10px;
 }
