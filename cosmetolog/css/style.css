@@ -13,13 +13,6 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter Extra Light";
-  src: url(/fonts/InterExtra-Ligth/Inter-ExtraLightBETA.woff2) format("woff2"), url(/fonts/InterExtra-Ligth/Inter-ExtraLightBETA.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "Garamond";
   src: url(/fonts/Garamond/garamond.woff2) format("woff2"), url(/fonts/Garamond/garamond.woff) format("woff");
   font-weight: normal;
@@ -72,6 +65,8 @@ h2 {
 }
 
 .btn {
+  font-size: 24px;
+  line-height: 1.2;
   background: #e74e6c;
   border-radius: 10px;
   color: beige;
@@ -79,9 +74,7 @@ h2 {
   width: 205px;
   height: 79px;
   margin-bottom: 10px;
-  font-size: 24px;
   text-transform: uppercase;
-  line-height: 1.2;
 }
 
 .btn__menu {
@@ -127,10 +120,10 @@ h2 {
   padding: 14px 13px 13px 13px;
 }
 .logo__title {
+  font-size: 19px;
   position: relative;
   color: #de2448;
   text-align: center;
-  font-size: 19px;
   text-transform: uppercase;
   padding-bottom: 8px;
 }
@@ -169,7 +162,7 @@ h2 {
   font-weight: 200;
 }
 .info__picture {
-  margin-top: -37%;
+  margin-top: -9%;
 }
 .info__features {
   width: 100%;
@@ -203,7 +196,7 @@ h2 {
   color: #de2448;
 }
 .info__feature-desc {
-  font-family: "Inter Extra Light";
+  font-family: "Inter Extra Light", "sans-serif";
 }
 
 .item-1 .info__feature-title {
@@ -315,7 +308,6 @@ h2 {
   font-size: 12px;
   font-family: Roboto;
   font-weight: 300;
-  text-transform: lowercase;
   padding: 12px 14px;
 }
 
@@ -377,6 +369,21 @@ h2 {
   padding-bottom: 25px;
 }
 .reviews__swiper-wrapper {
+  padding-bottom: 40px;
+}
+
+.education {
+  padding-bottom: 20px;
+}
+.education__title {
+  margin-bottom: 10px;
+}
+.education__slider {
+  width: 100%;
+  border-radius: 9px;
+  padding-bottom: 25px;
+}
+.education__swiper-wrapper {
   padding-bottom: 40px;
 }
 
@@ -445,12 +452,10 @@ h2 {
   max-height: 70px;
 }
 .faq__item-answer p {
-  font-size: 16px;
-  line-height: 16px;
-  margin: 0;
-  margin-bottom: 14px;
   position: relative;
+  margin: 0;
   padding: 0 0 0 15px;
+  margin-bottom: 15px;
 }
 .faq__item-answer p::before {
   position: absolute;
@@ -480,10 +485,10 @@ h2 {
   font-size: 16px;
   height: 55px;
   width: 100%;
-  transition: background 0.2s ease-in, top 0.2s ease-in;
+  transition: background-color 0.2s ease-in, top 0.2s ease-in;
 }
 .contact__social-btn:hover {
-  background: #e9385c;
+  background-color: #e9385c;
   position: relative;
   top: 1px;
 }

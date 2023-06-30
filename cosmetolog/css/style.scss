@@ -13,18 +13,20 @@
     src: url(/fonts/Inter-Light/Inter-LightBETA.woff2) format("woff2"),
         url(/fonts/Inter-Light/Inter-LightBETA.woff) format("woff");
     font-weight: normal;
+    // 300
     font-style: normal;
     font-display: swap;
 }
 
-@font-face {
-    font-family: "Inter Extra Light";
-    src: url(/fonts/InterExtra-Ligth/Inter-ExtraLightBETA.woff2) format("woff2"),
-        url(/fonts/InterExtra-Ligth/Inter-ExtraLightBETA.woff) format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: "Inter Extra Light";
+//     src: url(/fonts/InterExtra-Ligth/Inter-ExtraLightBETA.woff2) format("woff2"),
+//         url(/fonts/InterExtra-Ligth/Inter-ExtraLightBETA.woff) format("woff");
+//     font-weight: normal;
+//     // 200
+//     font-style: normal;
+//     font-display: swap;
+// }
 
 @font-face {
     font-family: "Garamond";
@@ -89,6 +91,8 @@ h2 {
 }
 
 .btn {
+    font-size: 24px;
+    line-height: 1.2;
     background: $raspberry;
     border-radius: 10px;
     color: beige;
@@ -96,9 +100,7 @@ h2 {
     width: 205px;
     height: 79px;
     margin-bottom: 10px;
-    font-size: 24px;
     text-transform: uppercase;
-    line-height: 1.2;
 }
 
 .btn__menu {
@@ -133,10 +135,6 @@ h2 {
 
 .flex-wrapper {
     @include flex-wrapper;
-
-    // .services & {
-    //     margin-bottom: 30px;
-    // }
 }
 
 .dropdown {
@@ -157,10 +155,10 @@ h2 {
     }
 
     &__title {
+        font-size: 19px;
         position: relative;
         color: $red;
         text-align: center;
-        font-size: 19px;
         text-transform: uppercase;
         padding-bottom: 8px;
 
@@ -208,7 +206,7 @@ h2 {
     }
 
     &__picture {
-        margin-top: -37%;
+        margin-top: -9%;
     }
 
     &__features {
@@ -248,7 +246,7 @@ h2 {
     }
 
     &__feature-desc {
-        font-family: "Inter Extra Light";
+        font-family: "Inter Extra Light", 'sans-serif';
     }
 }
 
@@ -377,7 +375,7 @@ h2 {
         font-size: 12px;
         font-family: Roboto;
         font-weight: 300;
-        text-transform: lowercase;
+        // text-transform: lowercase;
         padding: 12px 14px;
     }
 }
@@ -451,6 +449,31 @@ h2 {
         padding-bottom: 40px;
     }
 }
+
+.education {
+    padding-bottom: 20px;
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__slider {
+        width: 100%;
+        border-radius: 9px;
+        padding-bottom: 25px;
+    }
+
+    &__swiper-wrapper {
+        padding-bottom: 40px;
+    }
+}
+
+
+
+
+
+
+
 
 // faq
 
@@ -536,14 +559,10 @@ h2 {
     }
 
     &__item-answer p {
-        // position: relative;
-        font-size: 16px;
-        line-height: 16px;
-        margin: 0;
-        // padding: 0 0 0 15px;
-        margin-bottom: 14px;
         position: relative;
+        margin: 0;
         padding: 0 0 0 15px;
+        margin-bottom: 15px;
 
         &::before {
             position: absolute;
@@ -578,10 +597,10 @@ h2 {
         font-size: 16px;
         height: 55px;
         width: 100%;
-        transition: background 0.2s ease-in, top 0.2s ease-in;
+        transition: background-color 0.2s ease-in, top 0.2s ease-in;
 
         &:hover {
-            background: #e9385c;
+            background-color: #e9385c;
             position: relative;
             top: 1px;
         }
