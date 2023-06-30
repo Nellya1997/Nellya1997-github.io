@@ -493,10 +493,6 @@ h2 {
 .contact__social-btn:hover {
   opacity: 0.8;
 }
-.contact__social-btn:active {
-  position: relative;
-  top: 5px;
-}
 .contact__social-btn:nth-child(1):after {
   position: absolute;
   content: "";

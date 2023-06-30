@@ -607,10 +607,10 @@ h2 {
             opacity: 0.8;
         }
 
-        &:active {
-            position: relative;
-            top: 5px;
-        }
+        // &:active {
+        //     position: relative;
+        //     top: 5px;
+        // }
 
         &:nth-child(1):after {
             position: absolute;
