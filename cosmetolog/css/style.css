@@ -473,10 +473,9 @@ h2 {
 }
 
 .contact__social {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   text-align: center;
 }
 .contact__social-btn {
@@ -484,23 +483,19 @@ h2 {
   position: relative;
   font-size: 16px;
   height: 55px;
-  width: 100%;
-  transition: background-color 0.2s ease-in, top 0.2s ease-in;
+  display: flex;
+  width: calc(50% - 10px);
+  transition: opacity 0.3s ease-in, top 0.2s ease-in;
+}
+.contact__social-btn span {
+  margin: auto;
 }
 .contact__social-btn:hover {
-  background-color: #e9385c;
-  position: relative;
-  top: 1px;
+  opacity: 0.8;
 }
 .contact__social-btn:active {
   position: relative;
   top: 5px;
-}
-.contact__social-btn:nth-child(even) {
-  padding: 0 6px 0 41px;
-}
-.contact__social-btn:nth-child(odd) {
-  padding: 0 41px 0 6px;
 }
 .contact__social-btn:nth-child(1):after {
   position: absolute;
@@ -547,11 +542,6 @@ h2 {
   border-right: 3px solid #fff;
 }
 
-@media (min-width: 375px) {
-  .contact__social {
-    grid-column-gap: 30px;
-  }
-}
 @media (min-width: 768px) {
   .container {
     max-width: 600px;
