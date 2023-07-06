@@ -33,22 +33,22 @@
             <div class="logo">Beauty <br><span>expert</span></div>
           </li>
           <li class="navigation__item">
-            <a href="#services" class="navigation__link">Главная</a>
+            <a href="#home" class="navigation__link">Главная</a>
           </li>
           <li class="navigation__item">
             <a href="#about" class="navigation__link">Обо&nbsp;мне</a>
           </li>
           <li class="navigation__item">
-            <a href="#reviews" class="navigation__link">Услуги</a>
+            <a href="#services" class="navigation__link">Услуги</a>
           </li>
           <li class="navigation__item">
-            <a href="#contacts" class="navigation__link">Результат</a>
+            <a href="#result" class="navigation__link">Результат</a>
           </li>
           <li class="navigation__item">
-            <a href="#contacts" class="navigation__link">Прайс</a>
+            <a href="#price" class="navigation__link">Прайс</a>
           </li>
           <li class="navigation__item">
-            <a href="#contacts" class="navigation__link">Отзывы</a>
+            <a href="#reviews" class="navigation__link">Отзывы</a>
           </li>
           <li class="navigation__item">
             <a href="#contacts" class="navigation__link">Контакты</a>
@@ -58,7 +58,6 @@
           <a class="navigation__social-item social-item" target="_blank" href="https://instagram.com/katrin_elektro?igshid=NGExMmI2YTkyZg=="><img src="icon/insta.png"></a>
           <a class="navigation__social-item social-item" target="_blank" href="https://wa.me/79035329338"><img src="icon/whatsapp.png"></a>
           <a class="navigation__social-item  social-item" target="_blank" href="https://vk.com/katrin_elektro"><img src="icon/vk.png"></a>
-
         </div>
         <a class="navigation__phone phone" href="tel:+79085329338">
           8-928-759-85-74
@@ -68,13 +67,18 @@
     </div>
   </header>
   <main>
-    <!-- atelier 
+    <!-- atelier  
 
     <section class="atelier ">
-      <div class="circle"></div>
+ <div class="circle"></div>
       <div class="circle circle--right-top"></div>
       <div class="circle circle--left-bottom"></div>
-      <div class="circle circle--right-bottom"></div>
+      <div class="circle circle--right-bottom"></div> 
+      <div class="home__background">
+        <div class="roses"></div>
+      </div>
+
+
       <div class="container">
         
         <div class="atelier__wrapper">
@@ -95,14 +99,13 @@
               </a>
               <img src="/img/atelier/rose.png">
             </div>
-            <img src="/img/atelier/rose.png">
+              <img src="/img/atelier/rose.png"> 
           </div>
         </div>
     </section>
 -->
 
-
-    <section class="home">
+    <section id="home" class="home">
       <div class="home__background">
         <div class="roses"></div>
       </div>
@@ -115,19 +118,17 @@
           </div>
         </div>
         <div class="home__img">
-          <div class="girl">
-            <picture class="home__picture picture">
-              <source type="image/webp" srcset="img/atelier/girl.webp" media="(max-width: 2400px)">
-              <source type="image/png" srcset="img/atelier/girl.png" media="(max-width: 2400px)">
-              <img src="img/atelier/girl.png" alt="Студия электроэпиляции">
-            </picture>
-          </div>
+          <picture class="home__picture picture">
+            <source type="image/webp" srcset="img/atelier/content.webp" media="(max-width: 2400px)">
+            <source type="image/png" srcset="img/atelier/content.png" media="(max-width: 2400px)">
+            <img src="img/atelier/content.png" alt="Студия электроэпиляции">
+          </picture>
+          <a class="home__link link" href="https://wa.me/79035329338" target="_blank">Записаться на сеанс</a>
         </div>
-        <a class="home__link link" href="https://wa.me/79035329338" target="_blank">Записаться на сеанс</a>
       </div>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="about__container container">
         <div class="about__title">
           <h2 class="title">Обо мне</h2>
@@ -343,7 +344,7 @@
         </div>
     </section>
 
-    <section class="result">
+    <section id="result" class="result">
       <div class="result__container container">
         <h2 class="title">Результат</h2>
         <p class="result__description">Колоссальные изменения процедуры</p>
@@ -425,7 +426,7 @@
       </div>
     </section>
 
-    <section class="price">
+    <section id="price" class="price">
       <div class="container">
         <h2 class="price__title title">Прайс</h2>
         <div class="price__women">
@@ -489,7 +490,7 @@
         <div class="cabinet__title">
           <h2 class="title ">Фото студии</h2>
           <div class="cabinet__description">
-            <p>Наша светлая и&nbsp;уютная студия в&nbsp;центре Дзержинска</p>
+            <p>Наша свтелая и&nbsp;уютная студия в&nbsp;центре Дзержинска</p>
           </div>
         </div>
         <div class="cabinet__slider">
