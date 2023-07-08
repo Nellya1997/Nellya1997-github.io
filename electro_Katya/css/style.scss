@@ -496,15 +496,12 @@ a {
     &__img {
         max-height: 75vh;
         position: relative;
+
         @include flexy(column);
-        margin-bottom: 1px;
 
 
-        img {
-            //width: 100%;
-            //height: 100%;
-            //object-fit: cover;
-        }
+        //margin-bottom: 1px;
+
     }
 
 
@@ -606,6 +603,7 @@ a {
     &__container {
         @include flexy(column);
         gap: 20px;
+        overflow-x: hidden;
     }
 
     &__description {
@@ -666,6 +664,11 @@ a {
         }
     }
 
+    .swiper-wrapper {
+        //make a gap to pagination
+        padding-bottom: 25px;
+    }
+
     .swiper-slide {
         width: 300px;
         margin: 0px calc(5px + 35 * (100vw / 1366));
@@ -673,11 +676,6 @@ a {
         picture {
             height: calc(250px + 200 * (100vw / 1366));
         }
-    }
-
-    .swiper-wrapper {
-        //make a gap to pagination
-        padding-bottom: 25px;
     }
 
     // пока напишу как ублюдоид: в будущем надо создавать один класс свайпер - на него одинаковая навигация, далее swiper-standard для обчного свайпера и swiper-coverflow - для создания этого чудесного эффекта
@@ -1043,11 +1041,6 @@ a {
 .reviews {
     position: relative;
 
-    .container {
-        padding: 25px 0px;
-        @include centryBlock(80vw);
-    }
-
     &__background {
         position: absolute;
         z-index: -1;
@@ -1059,11 +1052,20 @@ a {
             radial-gradient(at 75% 75%, rgba(202, 237, 255, 0.4) 11%, rgba(255, 255, 255, 0) 28%);
     }
 
+    .container {
+        padding: 25px 0px;
+        @include centryBlock(80vw);
+    }
+
     &__description {
         font-size: 10px;
         line-height: 12px;
         font-weight: 500;
         text-align: center;
+    }
+
+    &__slider {
+        width: 100%;
     }
 }
 
@@ -1223,21 +1225,6 @@ a {
         }
     }
 }
-
-/*
-@media (min-width: 1023px) {
-    .home {
-        margin-top: 118px;
-    }
-
-    .atelier {
-        &__wrapper {
-            max-height: calc(100vh - 61px);
-        }
-    }
-}
-*/
-
 
 @media (min-width: 1280px) {
     .container {
