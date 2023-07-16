@@ -430,62 +430,8 @@ a {
   height: 50px;
 }
 
-/*
-.atelier {
-
-    margin-top: 60px;
-    position: relative;
-
-    &__wrapper {
-        // height: calc(100vh - 50px);
-        font-family: "Montserrat", sans-serif;
-        text-align: center;
-        position: relative;
-        // max-height: calc(100vh - 61px);
-    }
-
-    &__title {
-        color: $lilac;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 0;
-    }
-
-    &__subtitle {
-        color: $dark;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 0.8;
-        margin-bottom: 16px;
-    }
-
-    &__desc {
-        font-size: 10px;
-        font-weight: 400;
-        margin-bottom: 26px;
-
-        span {
-            color: $lilac;
-            font-weight: 700;
-        }
-    }
-
-    &__record-link {
-        position: absolute;
-        bottom: 0;
-
-        & img {
-            position: absolute;
-            width: 49px;
-            height: 49px;
-            left: -17px;
-            top: 0;
-        }
-    }
-}
-*/
 .swiper {
-  padding-bottom: 25px;
+  padding-bottom: 38px;
 }
 .swiper .swiper-pagination-bullet {
   width: 8px;
@@ -516,6 +462,7 @@ a {
 .about__master {
   margin: 0 auto;
   width: 80vw;
+  padding-top: 10px;
 }
 .about__master:first-child {
   font-size: 12px;
@@ -812,6 +759,16 @@ a {
 }
 .cabinet__slider {
   width: 100%;
+}
+
+.cabinet__slider .picture {
+  height: 442px;
+}
+
+.cabinet__slider .picture img,
+.reviews__slider .picture img {
+  border-radius: 9px;
+  object-fit: cover;
 }
 
 .faq__title {

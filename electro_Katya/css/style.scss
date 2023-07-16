@@ -51,7 +51,7 @@ $mainColorText: #3a3a42;
 // $font-italic: 'inter-italic', 'font', sans-serif;
 
 // удолить после окончания разработки!!!
-$redBorder: 2px solid red;
+// $redBorder: 2px solid red;
 
 html {
     scroll-behavior: smooth;
@@ -521,19 +521,15 @@ a {
     }
 }
 
-// Студия
-/*
 .atelier {
 
     margin-top: 60px;
     position: relative;
 
     &__wrapper {
-        // height: calc(100vh - 50px);
         font-family: "Montserrat", sans-serif;
         text-align: center;
         position: relative;
-        // max-height: calc(100vh - 61px);
     }
 
     &__title {
@@ -614,6 +610,7 @@ a {
 
     &__master {
         @include centryBlock(80vw);
+        padding-top: 10px;
 
         &:first-child {
             font-size: 12px;
@@ -1225,6 +1222,19 @@ a {
         }
     }
 }
+
+/*
+@media (min-width: 1023px) {
+    .home {
+        margin-top: 118px;
+    }
+
+    &__wrapper {
+        max-height: calc(100vh - 61px);
+    }
+}
+*/
+
 
 @media (min-width: 1280px) {
     .container {
