@@ -188,7 +188,7 @@ button {
 		background: #f2edf5;
 		position: fixed;
 		right: -100%;
-		width: 98%;
+		width: 100%;
 		text-align: center;
 		transition: 0.3s;
 		a {
@@ -1090,6 +1090,7 @@ button {
 		&__wrapper-title .title {
 			margin-bottom: 30px;
 			// padding-bottom: 0;
+			text-align: left;
 		}
 
 		&__advantages-moving {
@@ -1139,22 +1140,14 @@ button {
 }
 
 @media (min-width: 1280px) {
-	// .container {
-	// 	padding: 0 85px;
-	// }
 	.title {
 		font-size: 45px;
 		line-height: 45px;
 	}
 
-	// burger
 	.burger {
 		display: none;
 	}
-
-	// Навигация
-
-	// about
 
 	.about {
 		margin: 0 auto;
@@ -1231,6 +1224,13 @@ button {
 		&__social img {
 			width: 67px;
 			height: 67px;
+		}
+	}
+
+	.first {
+		&__letter {
+			font-size: 20px;
+			line-height: 22px;
 		}
 	}
 
@@ -1445,74 +1445,3 @@ button {
 		}
 	}
 }
-
-// 	.first {
-// 		padding-top: 148px;
-
-// 		&__name {
-// 			font-size: 150px;
-// 			line-height: 120px;
-// 			margin-bottom: 29px;
-// 		}
-
-// 		&__wrapper-h1 {
-// 			justify-content: flex-start;
-// 		}
-
-// 		&__wrapper-title .link {
-// 			padding: 20px 111px;
-// 			margin-left: -17px;
-// 		}
-
-// 		&__avtor,
-// 		&__letter {
-// 			font-size: 51px;
-// 			line-height: 55px;
-// 		}
-
-// 		&__avtor {
-// 			padding-right: 36px;
-// 		}
-
-// 		&__advantages {
-// 			max-width: 63%;
-// 			// align-items: center;
-
-// 			& span {
-// 				font-size: 22px;
-// 				line-height: 20px;
-// 				text-align: center;
-// 				padding: 16px 22px;
-// 			}
-// 		}
-
-// 		&__advantages-moving {
-// 			margin-left: -14px;
-// 			margin-bottom: 65px;
-// 		}
-
-// 		&__advantages:first-child {
-// 			margin-bottom: 17px;
-// 		}
-
-// 		&__advantages span:first-child {
-// 			margin-right: 25px;
-// 		}
-
-// 		&__wrapper {
-// 			width: 50%;
-// 			margin-bottom: 0;
-// 		}
-
-// 		&__wrapper .picture {
-// 			height: 796px;
-// 			margin-top: -21px;
-// 		}
-
-// 		&__planet::before {
-// 			background-size: 69%;
-// 			background-position: 89% 51%;
-// 		}
-// 	}
-// }
-

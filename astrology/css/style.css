@@ -150,13 +150,12 @@ button {
 .nav__menu {
   z-index: 11;
   height: 100vh;
-  padding: 10px;
   top: -2px;
   border-radius: 0px 0px 20px 20px;
   background: #f2edf5;
   position: fixed;
   right: -100%;
-  width: 98%;
+  width: 100%;
   text-align: center;
   transition: 0.3s;
 }
@@ -957,6 +956,7 @@ button {
   }
   .first__wrapper-title .title {
     margin-bottom: 30px;
+    text-align: left;
   }
   .first__advantages-moving {
     margin-bottom: 30px;
@@ -1070,6 +1070,10 @@ button {
   .about__social img {
     width: 67px;
     height: 67px;
+  }
+  .first__letter {
+    font-size: 20px;
+    line-height: 22px;
   }
   .services__wrapper {
     display: flex;
