@@ -423,7 +423,7 @@ button {
   position: relative;
 }
 .swiper__slide-desc::before {
-  content: url(/img/slider/icon.png);
+  content: url(../img/slider/icon.png);
   position: absolute;
   left: -13px;
   top: 9px;
@@ -500,7 +500,6 @@ button {
   color: #e7d8e8;
 }
 .about__wrapper {
-  background: url("../img/about/bg1.png") no-repeat;
   background-size: contain;
   background-position: right -72px top -20px;
 }
@@ -1063,7 +1062,8 @@ button {
   }
   .about .btn a {
     font-size: 30px;
-    padding: 40px 40px;
+    line-height: 30px;
+    padding: 34px 40px;
   }
   .about .socials {
     display: flex;

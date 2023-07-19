@@ -494,7 +494,7 @@ button {
 		margin-bottom: 55px;
 		position: relative;
 		&::before {
-			content: url(/img/slider/icon.png);
+			content: url(../img/slider/icon.png);
 			position: absolute;
 			left: -13px;
 			top: 9px;
@@ -574,7 +574,7 @@ button {
 	color: $superlightpurple;
 
 	&__wrapper {
-		background: url("../img/about/bg1.png") no-repeat;
+		// background: url("../img/about/bg1.png") no-repeat;
 		background-size: contain;
 		background-position: right -72px top -20px;
 	}
@@ -1114,6 +1114,16 @@ button {
 		}
     }
 
+	// .about {
+	// 	// margin: 0 auto;
+	// 	// background: #220438;
+	// 	// padding-bottom: 30px;
+	// 	// color: $superlightpurple;
+	
+	// 	&__wrapper {
+	// 		background: url("../img/about/bg1.png") no-repeat;
+	// 	}
+	// }
 
 
 	.container-none-desktop {
@@ -1221,7 +1231,8 @@ button {
 		}
 		.btn a {
 			font-size: 30px;
-			padding: 40px 40px;
+			line-height: 30px;
+    		padding: 34px 40px;
 		}
 		.socials {
 			display: flex;
