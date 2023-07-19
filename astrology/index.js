@@ -59,7 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
   accordions.forEach((element) => {
     let control = element.querySelector('.js-button-accordion');
     control.addEventListener('click', function () {
-      this.closest('.js-accordion').classList.toggle('open');
+      let accordion = this.closest('.js-accordion');
+      accordion.classList.toggle('open');
+
+      let button = this.querySelector('span');
+      button.classList.toggle('rotate');
     });
   });
 });

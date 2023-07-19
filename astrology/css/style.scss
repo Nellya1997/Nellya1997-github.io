@@ -679,6 +679,13 @@ button {
 			left: auto;
 			right: -1px;
 		}
+
+		&.rotate::before{
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&.rotate::after{
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
 	}
 }
 
@@ -1145,9 +1152,9 @@ button {
 		line-height: 45px;
 	}
 
-	.burger {
-		display: none;
-	}
+	// .burger {
+	// 	display: none;
+	// }
 
 	.about {
 		margin: 0 auto;
@@ -1328,6 +1335,12 @@ button {
 			font-style: normal;
 			font-weight: 500;
 			line-height: 24px;
+		}
+	}
+	
+	.services {
+		&__accordion {
+			min-height: 171px;
 		}
 	}
 

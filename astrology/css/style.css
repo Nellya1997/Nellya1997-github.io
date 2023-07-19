@@ -600,6 +600,12 @@ button {
   left: auto;
   right: -1px;
 }
+.button--accordion span.rotate::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.button--accordion span.rotate::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
 
 .accordion {
   background-color: rgba(231, 216, 232, 0.2);
@@ -995,9 +1001,6 @@ button {
     font-size: 45px;
     line-height: 45px;
   }
-  .burger {
-    display: none;
-  }
   .about {
     margin: 0 auto;
     background: #220438;
@@ -1156,6 +1159,9 @@ button {
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
+  }
+  .services__accordion {
+    min-height: 171px;
   }
 }
 @media (min-width: 1440px) {
