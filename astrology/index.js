@@ -3,21 +3,23 @@
 const widthMax = window.matchMedia('(min-width: 1024px)');
 //   const widthMin = window.matchMedia('(max-width: 768px)');
 const firstWrapper = document.querySelector('.first__about');
-const firstAdvantagesWrapper = document.querySelector('.first__advantages-moving');
+const firstAdvantagesWrapper = document.querySelector(
+  '.first__advantages-moving'
+);
 const link = document.querySelector('.js-link');
 // js-link
 
-if (window.screen.width > 1024) {
+if (window.screen.width > 1023) {
   firstWrapper.append(firstAdvantagesWrapper);
   firstWrapper.append(link);
 }
 
-// Swiper Slider
+// Swiper client
 const swiper = new Swiper('.swiper', {
   spaceBetween: 30,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
 
