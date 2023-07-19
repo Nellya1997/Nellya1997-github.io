@@ -190,7 +190,7 @@ button {
   padding-bottom: 30px;
 }
 .nav__list-link {
-  color: #E7D8E8;
+  color: #e7d8e8;
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
@@ -336,7 +336,7 @@ button {
   left: 0;
   background: #220438;
   width: 100%;
-  height: 323%;
+  height: 454%;
   content: "";
 }
 .first__wrapper {
@@ -382,7 +382,7 @@ button {
   background: #220438;
   position: relative;
   padding-bottom: 30px;
-  z-index: 1;
+  z-index: 5;
 }
 .client .slider-desktop {
   display: none;
@@ -716,7 +716,7 @@ button {
 }
 .faq.open .faq__panel {
   opacity: 1;
-  max-height: 1000px;
+  max-height: 2000px;
 }
 .faq.open .button::after {
   transform: rotate(0deg) translate(0%, 0%);
@@ -767,7 +767,7 @@ button {
   border-radius: 10px;
   padding: 24px;
   margin-bottom: 20px;
-  min-height: 130px;
+  min-height: 100px;
 }
 .services .open .services__content {
   opacity: 1;
@@ -1200,9 +1200,6 @@ button {
     width: 67px;
     height: 67px;
   }
-  .services__accordion {
-    min-height: 171px;
-  }
   .services__wrapper {
     display: flex;
     -moz-column-gap: 50px;
@@ -1284,6 +1281,18 @@ button {
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
+  }
+  .services__first .services__accordion:last-child {
+    min-height: 206px;
+  }
+  .services__first .services__accordion:last-child .button--accordion {
+    margin-top: 50px;
+  }
+  .services__second .services__accordion:last-child {
+    min-height: 206px;
+  }
+  .services__mini {
+    width: 90%;
   }
   .client__desc {
     font-size: 25px;
@@ -1439,6 +1448,18 @@ button {
   }
   .first__about, .first__wrapper {
     width: calc(50% - 10px);
+  }
+  .services__first .services__accordion:last-child {
+    min-height: 150px;
+  }
+  .services__first .services__accordion:last-child .button--accordion {
+    margin-top: 30px;
+  }
+  .services__second .services__accordion:last-child {
+    min-height: 150px;
+  }
+  .services__mini {
+    width: 90%;
   }
 }
 @media (min-width: 1920px) {
