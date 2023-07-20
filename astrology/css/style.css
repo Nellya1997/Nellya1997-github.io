@@ -1215,7 +1215,7 @@ button {
 @media (min-width: 768px) {
   .container {
     margin: 0 auto;
-    width: 83%;
+    width: 88%;
   }
   .consultation__link .link {
     padding: 18px 63px;
@@ -1234,6 +1234,7 @@ button {
   }
   .container {
     padding: 0;
+    max-width: initial;
   }
   .container-none-desktop {
     width: auto;
@@ -1671,12 +1672,14 @@ button {
     flex-direction: row;
     justify-content: center;
     align-items: start;
-    gap: 30px;
     padding-bottom: 0;
+    padding-top: 0;
+    gap: 32px;
   }
   .nav__list-link {
     color: #fff;
     font-size: 20px;
+    padding-left: 0;
   }
   .nav__list-link:hover {
     color: #f4dff5;
@@ -1684,7 +1687,6 @@ button {
   .nav__list-link:nth-child(7) {
     text-align: left;
     width: inherit;
-    padding: 0 0 0 30px;
     border-radius: inherit;
     border: none;
   }
@@ -1695,6 +1697,12 @@ button {
   .nav__list-link:nth-child(9) {
     color: #8e7a98;
     display: none;
+  }
+  .nav__list-link {
+    font-size: 19px;
+  }
+  .header__wrapper {
+    padding-top: 40px;
   }
   .first__name {
     font-size: 77px;
@@ -1732,6 +1740,9 @@ button {
 @media (min-width: 1920px) {
   .title {
     margin-bottom: 0;
+  }
+  .nav__list-link {
+    font-size: 24px;
   }
   .first {
     padding-top: 144px;

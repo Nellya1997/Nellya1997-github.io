@@ -1331,7 +1331,7 @@ button {
 	.container {
 		// max-width: 600px;
 		margin: 0 auto;
-		width: 83%;
+		width: 88%;
 	}
 
 	.consultation {
@@ -1359,6 +1359,7 @@ button {
 	}
 	.container {
 		padding: 0;
+		max-width: initial;
 	}
 	.container-none-desktop {
 		width: auto;
@@ -1895,12 +1896,15 @@ button {
 			flex-direction: row;
 			justify-content: center;
 			align-items: start;
-			gap: 30px;
+			// gap: 30px;
 			padding-bottom: 0;
+			padding-top: 0;
+			gap: 32px;
 		}
 		&__list-link {
 			color: #fff;
 			font-size: 20px;
+			padding-left: 0;
 			// &::before {
 			// 	position: relative;
 			// 	content: url(/img/header/icon.png);
@@ -1911,7 +1915,7 @@ button {
 			&:nth-child(7) {
 				text-align: left;
 				width: inherit;
-				padding: 0 0 0 30px;
+				// padding: 0 0 0 30px;
 				border-radius: inherit;
 				border: none;
 			}
@@ -1925,6 +1929,15 @@ button {
 			}
 		}
 	}
+	
+	.nav__list-link {
+		font-size: 19px;
+	}
+
+	.header__wrapper {
+		padding-top: 40px;
+	}
+
 	.first {
 		&__name {
 			font-size: 77px;
@@ -1979,6 +1992,10 @@ button {
 	.title {
 		margin-bottom: 0;
 		// padding-bottom: 18px;
+	}
+	
+	.nav__list-link {
+		font-size: 24px;
 	}
 
 	.first {
