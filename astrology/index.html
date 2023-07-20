@@ -7,6 +7,7 @@
   <title>"Астрология</title>
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -885,15 +886,47 @@
       </div>
     </section>
 
-    <section class="form flex-center">
-      <div class="form__title title">Остались вопросы?<br>
-        Напишите мне!</div>
-      <form action="#!" class="form__form flex-center">
-        <input type="text" class="form__input" placeholder="Ваше имя">
-        <input type="email" class="form__input" placeholder="Добавьте ссылку на вашу соц. сеть">
-        <textarea class="form__input" placeholder="Ваш вопрос"></textarea>
-        <input type="submit" class="form__btn" placeholder=" Отправить">
-      </form>
+    <section class="submit mb-10">
+      <div class="container">
+        <div class="submit__title title">Остались вопросы?<br>
+          Напишите мне!
+        </div>
+        <form class="submit__form needs-validation">
+          <div class="mb-10">
+            <label for="name" class="visually-hidden">Ваше имя</label>
+            <input type="name" class="form-control submit__form__input" id="name" minlength="3" placeholder="Ваше имя" required>
+            <div class="mt-2 invalid-feedback">
+              Введите не менее трёх символов
+            </div>
+          </div>
+          <div class="mb-10">
+            <label for="url" class="visually-hidden">Ссылка на вашу социальную сеть</label>
+            <input type="text" class="form-control submit__form__input" id="url" minlength="3" placeholder="Ссылка на вашу социальную сеть" required>
+            <div class="mt-2 invalid-feedback">
+              Введите не менее трёх символов
+            </div>
+          </div>                      
+          <div class="mb-10">
+            <label for="message" class="visually-hidden">Ваш вопрос</label>
+            <textarea class="form-control submit__form__input" id="message" minlength="10" placeholder="Ваш вопрос" required></textarea>
+            <div class="mt-2 invalid-feedback">
+              Введите не менее десяти символов
+            </div>
+          </div>
+          <div class="mb-10">
+            <input class="form-check-input submit__form__checkbox" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+              Я согласен на <a href="./politika-konfidentsialnosti" class="alert-link" target="_blank">обработку персональных данных</a>
+            </label>
+            <div class="mt-2 invalid-feedback">
+              Вы должны согласиться на обработку персональных данных.
+            </div>                            
+          </div>
+          <div class="submit__form__button">
+            <input class="focus-ring" type="submit" value="Отправить">
+          </div>
+        </form>
+      </div>
     </section>
 
     <section class="feedback">
@@ -930,8 +963,33 @@
 
   </main>
   <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <span>ИП&nbsp;Анастасия Якушева</span>
+
+        <div class="footer__politic">
+          <a href="/docs/политика-конфиденциальности.pdf" target="_blank" >Политика конфиденциальности</a>
+          <a href='/docs/оферта.pdf' target="_blank">Договор оферты</a>
+          <a href='/docs/заказ-и-оплата.pdf' target="_blank">Заказ и оплата</a>
+        </div>
+  
+        <div class="feedback__info-socials socials">
+          <div class="feedback__info-social social">
+            <a href="#!"><img src="./img/social/inst.svg" alt=""></a>
+          </div>
+          <div class="feedback__info-social social">
+            <a href="#!"><img src="./img/social/vk.svg" alt=""></a>
+          </div>
+          <div class="feedback__info-social social">
+            <a href="#!"><img src="./img/social/tg.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="routes.js"></script>
   <script src="index.js"></script>
 </body>
 

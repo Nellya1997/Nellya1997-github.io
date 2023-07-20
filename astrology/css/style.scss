@@ -1,3 +1,5 @@
+@import "./form";
+
 @font-face {
 	font-family: 'Montserrat';
 	src: url(../fonts/Montserrat-Regular.woff2) format('woff2'),
@@ -1279,6 +1281,35 @@ button {
 	}
 }
 
+.footer {
+	background: #220438;
+	color: #fff;
+	padding-top: 30px;
+	
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	& span {
+		display: inline-block;
+		margin-bottom: 30px;
+	}
+	
+	&__politic {
+		margin-bottom: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		& a:first-child,
+		& a:nth-child(2) {
+			margin-bottom: 20px;
+		}
+	}
+}
+
 @media (min-width: 375px) {
 	.first__wrapper .picture img {
 		object-fit: contain;
@@ -1732,7 +1763,7 @@ button {
 			}
 		}
 	}
-	
+
 	.method {
 		background: #220438;
 		padding: 0 10px;
@@ -1800,8 +1831,15 @@ button {
 			}
 		}
 	}
+
+	.footer {
+		&__wrapper {
+			flex-direction: inherit;
+			justify-content: space-between;
+		}
+	}
 }
-//
+
 @media (min-width: 1440px) {
 	.burger {
 		display: none;
@@ -1842,10 +1880,10 @@ button {
 		&__list-link {
 			color: #fff;
 			font-size: 20px;
-			&::before {
-				position: relative;
-				content: url(/img/header/icon.png);
-			}
+			// &::before {
+			// 	position: relative;
+			// 	content: url(/img/header/icon.png);
+			// }
 			&:hover {
 				color: $light-pink;
 			}
@@ -1999,7 +2037,7 @@ button {
 	.method {
 		background: #220438;
 		padding: 0 10px;
-		margin-bottom: 50px;
+		padding-bottom: 50px;
 
 		&__title {
 			color: #fff;

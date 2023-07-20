@@ -91,3 +91,59 @@ burger.addEventListener('click', () => {
   navMenu.classList.toggle('active');
   body.classList.toggle('noscroll');
 });
+
+const app = () => {
+  const form = document.querySelector('.submit__form');
+  const checkBox = form.querySelector('input[type=checkbox]');
+  const submitButton = form.querySelector('input[type=submit]');
+
+  const isCheck = checkBox.checked;
+  submitButton.disabled = !isCheck;
+  submitButton.style.opacity = isCheck ? '1' : '0.3';
+
+  checkBox.addEventListener('input', () => {
+    const isCheck = checkBox.checked;
+    submitButton.disabled = !isCheck;
+    submitButton.style.opacity = isCheck ? '1' : '0.3';
+    if (form.classList.contains('was-validated') && !isCheck) {
+      if (!checkBox.classList.contains('no-valid-check')) {
+        checkBox.classList.add('no-valid-check', 'is-invalid');
+        checkBox.nextElementSibling.classList.add('no-valid-rules');
+      }
+    } else {
+      if (checkBox.classList.contains('no-valid-check')) {
+        checkBox.classList.remove('no-valid-check', 'is-invalid');
+        checkBox.nextElementSibling.classList.remove('no-valid-rules');
+      }
+    }
+});
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formElements = [...form.querySelectorAll('.form-control')];
+    const formValues = formElements.reduce((acc, element) => {
+      const { id, value } = element;
+      acc[id] = value;
+      return acc;
+    }, {});
+
+    form.classList.add('was-validated');
+
+    try {
+      await axios.post(routes.sendEmail, formValues);
+      form.reset();
+      form.textContent = 'Форма успешно отправлена!';
+    } catch (e) {
+      const isAlertErrorEnabled = form.querySelector('div[role=alert]');
+      if (!isAlertErrorEnabled) {
+        const alertError = document.createElement('div');
+        alertError.classList.add('alert', 'alert-danger', 'mt-3');
+        alertError.setAttribute('role', 'alert');
+        alertError.textContent = 'Произошла ошибка при отправке формы';
+        checkBox.parentElement.append(alertError);
+      }
+    }
+  });
+}
+
+app();
