@@ -764,7 +764,7 @@ button {
 
 		&::before {
 			position: absolute;
-			content: url('/img/about/mob-content.png');
+			content: url('../img/about/mob-content.png');
 			right: 18px;
 			top: -26px;
 		}
@@ -1529,7 +1529,7 @@ button {
 
 			&::before {
 				position: absolute;
-				content: url('/img/about/content.png');
+				content: url('../img/about/content.png');
 				right: inherit;
 				top: -62px;
 				left: -59px;
