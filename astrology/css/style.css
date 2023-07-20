@@ -1406,15 +1406,16 @@ button {
   }
   .services__wrapper {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-  }
-  .services__accordion {
-    width: calc(50% - 10px);
   }
   .services__first {
     width: 674px;
     margin-left: 50px;
+  }
+  .services__accordion {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 40px;
   }
   .services__second {
     width: 674px;

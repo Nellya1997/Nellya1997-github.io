@@ -1578,17 +1578,23 @@ button {
 		&__wrapper {
 			display: flex;
 			// column-gap: 50px;
-			justify-content: space-between;
+			// justify-content: space-between;
 			flex-wrap: wrap;
 		}
 		
-		&__accordion {
-			width: calc(50% - 10px);
-		}
+		// &__accordion {
+		// 	width: calc(50% - 10px);
+		// }
 
 		&__first {
 			width: 674px;
 			margin-left: 50px;
+		}
+		
+		&__accordion {
+			width: 90%;
+			margin: 0 auto;
+			margin-bottom: 40px;
 		}
 
 		&__second {
