@@ -1,4 +1,3 @@
-const scrollBar = window.innerWidth - document.body.clientWidth;
 const purchases = document.querySelector('.formPay__calculator__purchases');
 const priceAll = document.querySelectorAll('.formPay__calculator__price');
 const cartBadge = cartDiv.querySelector('.cart__badge');
@@ -7,7 +6,7 @@ const renderShop = () => {
   purchases.innerHTML = cart.getAll().map((item) => `
     <div class="row d-flex justify-content-between align-items-center mb-3">
       <span class="col-12 col-xl-6 fw-bold mb-3 mb-xl-0">${cart.getNameItem(item.id)}</span>
-      <span class="col-5 col-xl-3 fs-5 text-center">
+      <span class="col-5 col-xl-3 fs-5 text-xl-center">
         <i id=${item.id} data-manager="decrementCount" class="bi bi-dash-circle me-1"></i>
         ${cart.getCountItem(item.id)}
         <i id=${item.id} data-manager="incrementCount" class="bi bi-plus-circle ms-1"></i>
@@ -19,9 +18,11 @@ const renderShop = () => {
   priceAll.forEach((price) => price.textContent = cart.getPriceAll());
   cartBadge.textContent = cart.getCountItems();
   cartDiv.dataset.bsTitle = `= ${cart.getPriceAll()} BYN`;
-  new bootstrap.Tooltip(cartDiv);
+  if (window.screen.width > 768) {
+    new bootstrap.Tooltip(cartDiv);
+  }
 
-  const managersButtons = document.querySelectorAll('.bi');
+  const managersButtons = document.querySelectorAll('[data-manager]');
   managersButtons.forEach((button) => {
     button.addEventListener('click', ({ target: { id, dataset: { manager } }}) => {
       cart[manager](id);

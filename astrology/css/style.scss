@@ -774,10 +774,9 @@ button {
 
 .btn1 a {
 	font-family: Montserrat;
-	font-size: 20px;
+	font-size: 17px;
 	font-weight: 500;
-	line-height: 20px;
-	padding: 15px 50px;
+	padding: 15px 35px;
 	border-radius: 20px;
 	background: linear-gradient(180deg, #cfa6ee 0%, #a064cf 100%);
 	text-align: center;
@@ -1151,7 +1150,6 @@ button {
 
 .services {
 	color: $pink;
-	padding-bottom: 42px;
 
 	&__mini {
 		max-width: 80%;

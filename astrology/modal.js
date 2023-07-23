@@ -1,5 +1,6 @@
 const modalBackground = document.querySelector('.modalBackground');
 const modalClose = document.querySelector('.modalClose');
+const scrollBar = window.innerWidth - document.body.clientWidth;
 
 const closeModal = () => {
   modalBackground.style.display = 'none';

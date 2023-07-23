@@ -13,9 +13,6 @@
   margin: 0 auto;
   color: #e8afec;
 }
-.submit__form ::-moz-placeholder {
-  color: #e8afec;
-}
 .submit__form ::placeholder {
   color: #e8afec;
 }
@@ -37,8 +34,7 @@
   border: 1px solid #E7D8E8;
   background: rgba(142, 122, 152, 0.2);
   filter: drop-shadow(0px 5px 10px #523960);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   padding: 12px 20px;
 }
 .submit__form__input:focus {
@@ -417,8 +413,7 @@ button {
 .picture img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .first__planet .picture:after, .first__planet .picture::before {
   position: absolute;
@@ -516,6 +511,7 @@ button {
   border-radius: 8px;
   margin: 5px auto;
   background-color: #f4dff5;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .burger.active span:nth-child(2) {
@@ -647,8 +643,7 @@ button {
 .first__wrapper .picture img {
   position: relative;
   z-index: 10;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .first__advantages {
   display: flex;
@@ -895,10 +890,9 @@ button {
 
 .btn1 a {
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 500;
-  line-height: 20px;
-  padding: 15px 50px;
+  padding: 15px 35px;
   border-radius: 20px;
   background: linear-gradient(180deg, #cfa6ee 0%, #a064cf 100%);
   text-align: center;
@@ -948,8 +942,7 @@ button {
   max-width: 50%;
 }
 .about__img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: relative;
 }
 .about__img::after {
@@ -1180,7 +1173,6 @@ button {
 
 .services {
   color: #e8afec;
-  padding-bottom: 42px;
 }
 .services__mini {
   max-width: 80%;
@@ -1308,7 +1300,6 @@ button {
 }
 .consultation__link .link {
   font-size: 28px;
-  width: -moz-max-content;
   width: max-content;
   padding: 16px;
 }
@@ -1337,12 +1328,6 @@ button {
   height: 87px;
   vertical-align: top;
   resize: none;
-}
-.form__input::-moz-placeholder {
-  color: #e7d8e8;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
 }
 .form__input::placeholder {
   color: #e7d8e8;
@@ -1386,8 +1371,7 @@ button {
 }
 .services__border .services__bonus-title {
   display: flex;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   align-items: center;
   text-align: center;
   margin: 30px auto;
@@ -1478,8 +1462,7 @@ button {
   color: #4c2f5e;
 }
 .feedback__wrapper .feedback-img picture {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   display: block;
   height: inherit;
 }
@@ -1552,8 +1535,7 @@ button {
 
 @media (min-width: 375px) {
   .first__wrapper .picture img {
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 @media (min-width: 475px) {
@@ -1833,8 +1815,7 @@ button {
   }
   .services__border .services__bonus-title {
     display: flex;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
     align-items: center;
     text-align: center;
     margin: 30px auto;
