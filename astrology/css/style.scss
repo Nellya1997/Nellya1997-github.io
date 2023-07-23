@@ -794,7 +794,6 @@ button {
 // background-wrapper
 .background-wrapper {
 	background: url("../img/bg/bg.png") no-repeat;
-	background-position-y: 5%;
 }
 
 // About
@@ -1922,6 +1921,8 @@ button {
 			// column-gap: 50px;
 			// justify-content: space-between;
 			flex-wrap: wrap;
+			max-width: 80%;
+    		margin: 0 auto;
 		}
 
 		// &__accordion {

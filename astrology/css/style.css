@@ -908,7 +908,6 @@ button {
 
 .background-wrapper {
   background: url("../img/bg/bg.png") no-repeat;
-  background-position-y: 5%;
 }
 
 .about {
@@ -2359,4 +2358,6 @@ button {
     top: calc(70vh - 52.5%);
     right: 27.16875vh;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
