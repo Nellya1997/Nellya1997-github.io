@@ -1,6 +1,6 @@
 // перемещение блоков в первой секции
 
-const widthMax = window.matchMedia('(min-width: 1024px)');
+// const widthMax = window.matchMedia('(min-width: 1024px)');
 //   const widthMin = window.matchMedia('(max-width: 768px)');
 const firstWrapper = document.querySelector('.first__about');
 const firstAdvantagesWrapper = document.querySelector(
@@ -9,10 +9,36 @@ const firstAdvantagesWrapper = document.querySelector(
 const link = document.querySelector('.js-link');
 // js-link
 
+// перемещение блоков в секции обо мне на десктоп
+
+const aboutRightWrapper = document.querySelector('.about__wrapper-right');
+const aboutPicture = document.querySelector('.js-about-pic');
+const aboutLead = document.querySelector('.about__lead');
+const aboutInfo = document.querySelector('.about__info');
+const aboutBigWrapper = document.querySelector('.about__wrapperNew');
+
 if (window.screen.width > 1023) {
   firstWrapper.append(firstAdvantagesWrapper);
   firstWrapper.append(link);
+  aboutRightWrapper.append(aboutPicture);
+  aboutRightWrapper.append(aboutLead);
+
+  if (window.screen.width > 1919) {
+    aboutBigWrapper.append(aboutInfo);
+  }
 }
+
+
+
+
+
+// // перемещение блоков в секции обо мне на десктоп
+
+// const aboutRightWrapper = document.querySelector('.about__wrapper-right');
+// const aboutPicture = document.querySelector('.js-about-pic');
+
+
+
 
 // Swiper client
 const swiper = new Swiper('.swiper', {
@@ -23,38 +49,7 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-// // Услуги
-// document.querySelectorAll('.services__item').forEach(function (itemWrapper) {
-//   const more = itemWrapper.querySelector('.desc__more');
-//   const btn = itemWrapper.querySelector('.services__item-link');
-//   const desc = itemWrapper.querySelector('.services__item-desc');
-
-//   btn.addEventListener('click', function () {
-//     // more.classList.toggle('none');
-//     btn.classList.toggle('active');
-//     more.classList.toggle('active');
-//     desc.classList.toggle('desc-open');
-//     btn.classList.toggle('close');
-
-//     if (more.classList.contains('active')) {
-//       btn.textContent = 'Подробнее';
-//       more.style.maxHeight = more.scrollHeight + 'px';
-//     } else {
-//       btn.textContent = 'Свернуть';
-//       more.style.maxHeight = 0;
-//     }
-//   });
-// });
-
 // подключение аккордионов в блоке услуги
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   let accordions = document.querySelectorAll('.js-accordion');
-//   accordions.forEach((element) => {
-//     let control = element.querySelector('.js-button-accordion');
-//     control.addEventListener('click', function () {
-//       this.closest('.js-accordion').classList.toggle('open');
-//     });
 
 document.addEventListener('DOMContentLoaded', () => {
   let accordions = document.querySelectorAll('.js-accordion');
@@ -141,6 +136,70 @@ const app = () => {
         alertError.setAttribute('role', 'alert');
         alertError.textContent = 'Произошла ошибка при отправке формы';
         checkBox.parentElement.append(alertError);
+      }
+    }
+  });
+
+  //formPay
+  const formPay = document.getElementById('formPay');
+  const checkBoxPay = formPay.querySelector('input[type=checkbox]');
+  const submitButtonPay = formPay.querySelector('input[type=submit]');
+
+  const isCheckPay = checkBoxPay.checked;
+  submitButtonPay.disabled = !isCheckPay;
+  submitButtonPay.style.opacity = isCheckPay ? '1' : '0.3';
+
+  checkBoxPay.addEventListener('input', () => {
+    const isCheckPay = checkBoxPay.checked;
+    submitButtonPay.disabled = !isCheckPay;
+    submitButtonPay.style.opacity = isCheckPay ? '1' : '0.3';
+    if (formPay.classList.contains('was-validated') && !isCheckPay) {
+      if (!checkBoxPay.classList.contains('no-valid-check')) {
+        checkBoxPay.classList.add('no-valid-check', 'is-invalid');
+        checkBoxPay.nextElementSibling.classList.add('no-valid-rules');
+      }
+    } else {
+      if (checkBoxPay.classList.contains('no-valid-check')) {
+        checkBoxPay.classList.remove('no-valid-check', 'is-invalid');
+        checkBoxPay.nextElementSibling.classList.remove('no-valid-rules');
+      }
+    }
+  });
+
+  formPay.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const payMetod = {
+      id: 'pay',
+      value: formPay.querySelector('input[type=radio]:checked').textContent,
+    };
+    const services = {
+      id: 'services',
+      value: cart.getAll(),
+    };
+    const formElements = [...formPay.querySelectorAll('.form-control'), payMetod, services];
+    const formValues = formElements.reduce((acc, element) => {
+      const { id, value } = element;
+      acc[id] = value;
+      return acc;
+    }, {});
+
+    formPay.classList.add('was-validated');
+
+    try {
+      await axios.post(routes.sendEmailPay, formValues);
+      formPay.reset();
+      formPay.textContent = 'Форма успешно отправлена!';
+      closeModal();
+      closeCart();
+      cart.clearPurchase();
+    } catch (e) {
+      const isAlertErrorEnabled = formPay.querySelector('div[role=alert]');
+      if (!isAlertErrorEnabled) {
+        const alertError = document.createElement('div');
+        alertError.classList.add('alert', 'alert-danger', 'mt-3');
+        alertError.setAttribute('role', 'alert');
+        alertError.textContent = 'Произошла ошибка при отправке формы';
+        formPay.querySelector('#pay2').parentElement.append(alertError);
       }
     }
   });
