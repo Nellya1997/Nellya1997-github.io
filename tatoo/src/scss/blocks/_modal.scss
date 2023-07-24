@@ -16,7 +16,7 @@
         position: fixed;
         display: block;
         width: 81.25%;
-        max-height: 90vh;
+        max-height: 466px;
         overflow: auto;
         left: 50%;
         top: 50%;
@@ -51,7 +51,6 @@
 
             img {
                 vertical-align: middle;
-                z-index: 2;
             }
         }
     }

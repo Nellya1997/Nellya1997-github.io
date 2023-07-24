@@ -1,4 +1,6 @@
 .reviews {
+    
+    margin-bottom: 30px;
 
     .swiper-wrapper {
 
@@ -6,6 +8,10 @@
             display: none;
 
         }
+    }
+    
+    & .swiper {
+        padding-bottom: 53px;
     }
 }
 

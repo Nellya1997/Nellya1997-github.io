@@ -373,6 +373,10 @@ template {
   padding: 0;
 }
 
+a {
+  color: rgb(34, 8, 43);
+}
+
 html {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
@@ -384,7 +388,7 @@ html {
 }
 @media (min-width: 1920px) {
   html {
-    font-size: 44px;
+    font-size: 28px;
   }
 }
 
@@ -425,7 +429,7 @@ ul {
 }
 
 .link {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 600;
   line-height: 1.36em;
   text-decoration: none;
@@ -474,7 +478,7 @@ ul {
   left: auto;
 }
 .title span {
-  max-width: 119px;
+  max-width: 120px;
   padding: 0 20px;
   display: inline-block;
 }
@@ -679,7 +683,7 @@ ul {
 }
 
 .header {
-  width: 100vw;
+  width: 100%;
   height: 60px;
   position: fixed;
   z-index: 2;
@@ -697,7 +701,7 @@ ul {
   list-style-type: none;
 }
 .header .nav {
-  width: 100vw;
+  width: 100%;
   padding: 20px 20px;
   background-color: rgb(214, 205, 217);
   border: rgb(130, 88, 144);
@@ -1013,6 +1017,11 @@ ul {
 }
 .first__left-side {
   display: none;
+}
+.first__check-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .first__check-in .first__text {
   font-size: 14px;
@@ -1700,6 +1709,10 @@ ul {
   margin-right: 0.5rem;
 }
 
+.modalWindow {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .services__main {
     display: flex;
@@ -1919,7 +1932,7 @@ ul {
   position: fixed;
   display: block;
   width: 81.25%;
-  max-height: 90vh;
+  max-height: 466px;
   overflow: auto;
   left: 50%;
   top: 50%;
@@ -1953,7 +1966,6 @@ ul {
 }
 .modalBackground .modalActive .modalWindow img {
   vertical-align: middle;
-  z-index: 2;
 }
 
 @keyframes show {
@@ -2283,8 +2295,14 @@ ul {
     font-size: 25px;
   }
 }
+.reviews {
+  margin-bottom: 30px;
+}
 .reviews .swiper-wrapper .pc-slide {
   display: none;
+}
+.reviews .swiper {
+  padding-bottom: 53px;
 }
 
 @media (min-width: 767px) {
