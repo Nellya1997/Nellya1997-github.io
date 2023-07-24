@@ -1,45 +1,3 @@
-// перемещение блоков в первой секции
-
-// const widthMax = window.matchMedia('(min-width: 1024px)');
-//   const widthMin = window.matchMedia('(max-width: 768px)');
-const firstWrapper = document.querySelector('.first__about');
-const firstAdvantagesWrapper = document.querySelector(
-  '.first__advantages-moving'
-);
-const link = document.querySelector('.js-link');
-// js-link
-
-// перемещение блоков в секции обо мне на десктоп
-
-const aboutRightWrapper = document.querySelector('.about__wrapper-right');
-const aboutPicture = document.querySelector('.js-about-pic');
-const aboutLead = document.querySelector('.about__lead');
-const aboutInfo = document.querySelector('.about__info');
-const aboutBigWrapper = document.querySelector('.about__wrapperNew');
-
-if (window.screen.width > 1023) {
-  firstWrapper.append(firstAdvantagesWrapper);
-  firstWrapper.append(link);
-  aboutRightWrapper.append(aboutPicture);
-  aboutRightWrapper.append(aboutLead);
-
-  if (window.screen.width > 1919) {
-    aboutBigWrapper.append(aboutInfo);
-  }
-}
-
-
-
-
-
-// // перемещение блоков в секции обо мне на десктоп
-
-// const aboutRightWrapper = document.querySelector('.about__wrapper-right');
-// const aboutPicture = document.querySelector('.js-about-pic');
-
-
-
-
 // Swiper client
 const swiper = new Swiper('.swiper', {
   spaceBetween: 30,
@@ -76,7 +34,7 @@ faq.forEach((element) => {
   });
 });
 
-// Навигация
+// Навигация          
 const burger = document.querySelector('.burger');
 const navMenu = document.querySelector('.nav__menu');
 const body = document.body;
@@ -111,7 +69,7 @@ const app = () => {
         checkBox.nextElementSibling.classList.remove('no-valid-rules');
       }
     }
-});
+  });
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -206,3 +164,77 @@ const app = () => {
 }
 
 app();
+
+
+//перетаскивание DOM-узлов по странице будет описано ниже:
+
+//section first
+const firstResize = () => {
+  //i will move these elements;
+  const link = document.querySelector('.first__wrapper-link');
+  const advantages = document.querySelector('.first__advantages-wrapper');
+  //'containers' for moving
+  const leftSide = document.querySelector('.container-none-desktop');
+  const rightSideUp = document.querySelector('.first__wrapper');
+  const rightSideDown = document.querySelector('.first__advantages-moving');
+
+  function resize() {
+    if (window.screen.width > 1023) {
+      //take link and advantages to the left
+      leftSide.appendChild(advantages);
+      leftSide.appendChild(link);
+    } else if (window.screen.width < 1023) {
+      //take link and advantages to the right
+      rightSideUp.appendChild(link);
+      document.querySelector('.first__advantages-moving').appendChild(advantages);
+    }
+  };
+
+  resize();
+
+  window.addEventListener('resize', resize);
+}
+
+firstResize();
+
+//  section feedback
+const feedbackResize = () => {
+  const feedback = document.querySelector('.feedback');
+  const feedbackWrapper = document.querySelector('.feedback-wrapper');
+  const text = document.querySelector('.feedback-wrapper__down');
+
+  function resize() {
+    if (window.screen.width < 600) {
+      feedback.appendChild(text);
+    } else if (window.screen.width > 600) {
+      feedbackWrapper.appendChild(text);
+    }
+  }
+
+  resize();
+
+  window.addEventListener('resize', resize);
+}
+
+feedbackResize();
+
+
+
+
+// ЖЕНЯ ДОБАВЬ РЕСАЙЗ 
+
+
+const aboutRightWrapper = document.querySelector('.about__wrapper-right');
+const aboutPicture = document.querySelector('.js-about-pic');
+const aboutLead = document.querySelector('.about__lead');
+const aboutInfo = document.querySelector('.about__info');
+const aboutBigWrapper = document.querySelector('.about__wrapperNew');
+
+if (window.screen.width > 1023) {
+  aboutRightWrapper.append(aboutPicture);
+  aboutRightWrapper.append(aboutLead);
+
+  if (window.screen.width > 1919) {
+    aboutBigWrapper.append(aboutInfo);
+  }
+}

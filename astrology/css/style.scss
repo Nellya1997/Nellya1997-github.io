@@ -41,8 +41,8 @@ $superlightpink: rgba(231, 216, 232, 0.2);
 $BodegaScript: "BodegaScript", "font", sans-serif;
 
 // переменные feedback
-$feedbackPadding: calc(0px + 50 * (100vw - 378px) / 1920);
-$myHeight: 70vh;
+//$feedbackPadding: calc(0px + 50 * (100vw - 378px) / 1920);
+//$myHeight: 70vh;
 
 //mixins
 @mixin fonty($size: 22px, $weight: 400, $lineH: 30px) {
@@ -480,6 +480,7 @@ button {
 
 	&__advantages {
 		display: flex;
+		justify-content: center;
 
 		&:first-child {
 			margin-bottom: 9px;
@@ -532,6 +533,7 @@ button {
 	.slider-desktop {
 		display: none;
 	}
+
 	&__text {
 		color: #ddb6d1;
 		text-align: center;
@@ -541,6 +543,7 @@ button {
 		line-height: 20px;
 		padding-bottom: 20px;
 	}
+
 	&__desc {
 		color: #ddb6d1;
 		text-align: center;
@@ -550,21 +553,23 @@ button {
 		line-height: 20px;
 		padding-bottom: 20px;
 		position: relative;
+
 		::after {
 			position: absolute;
 			content: "";
-			background: url(../img/client/client-planet.png) no-repeat;
+			background: url("../img/client/client-planet.png") no-repeat;
 			background-position: bottom right;
 			background-size: contain;
-			bottom: 35px;
+			bottom: 0;
 			right: -4%;
-			width: 75px;
-			height: 147px;
+			width: 166px;
+			height: 156px;
 			z-index: -1;
 		}
 
 		p:nth-child(1) {
 			margin-bottom: 20px;
+
 			&:before {
 				content: ("");
 				background-image: url(../img/client/icon-desc.png);
@@ -581,8 +586,7 @@ button {
 		}
 
 		span {
-			// color: #4c2f5e;
-			color: #971ce3;
+			color: #4c2f5e;
 			font-weight: 600;
 		}
 	}
@@ -795,6 +799,7 @@ button {
 // background-wrapper
 .background-wrapper {
 	background: url("../img/bg/bg.png") no-repeat;
+	background-size: auto;
 }
 
 // About
@@ -809,6 +814,7 @@ button {
 
 	&__title {
 		position: relative;
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -823,15 +829,9 @@ button {
 			z-index: 1;
 		}
 	}
-	// &__wrapper {
-	// 	display: flex;
-	// }
-
-	// &__wrapperNew {
-	// 	display: flex;
-	// }
 
 	.picture {
+
 		&::after,
 		&::before {
 			display: none;
@@ -845,6 +845,7 @@ button {
 	&__img {
 		object-fit: cover;
 		position: relative;
+		height: 341px;
 
 		&::after {
 			// content: '';
@@ -883,9 +884,11 @@ button {
 	&__items {
 		z-index: 3;
 	}
+
 	&__dlex-desktop {
 		display: flex;
 	}
+
 	// &__info {
 	// 	position: absolute;
 	// }
@@ -1057,6 +1060,7 @@ button {
 	width: 30px;
 	height: 30px;
 }
+
 .faq {
 	&__panel {
 		max-height: 0;
@@ -1311,64 +1315,6 @@ button {
 	}
 }
 
-// form
-.form {
-	background: #321646;
-
-	&__title {
-		font-size: 16px;
-		color: #e7d8e8;
-	}
-
-	&__form {
-		width: 100%;
-	}
-
-	&__input {
-		width: 80%;
-		margin: 0 auto 10px;
-		border-radius: 20px;
-		background: rgba(142, 122, 152, 0.2);
-		padding: 12px 20px;
-		border: 0;
-
-		&:nth-child(3) {
-			display: flex;
-			align-items: start;
-			height: 87px;
-			vertical-align: top;
-			resize: none;
-		}
-
-		&::placeholder {
-			color: #e7d8e8;
-			font-size: 14px;
-			font-weight: 500;
-			line-height: 20px;
-		}
-	}
-
-	&__btn {
-		width: 84%;
-		margin: 0 auto 40px;
-		border-radius: 20px;
-		background: #8e7a98;
-		border: 0;
-		padding: 12px 50px;
-		overflow: hidden;
-		color: #e7d8e8;
-		text-align: center;
-		font-size: 20px;
-		font-weight: 500;
-		line-height: 20px;
-	}
-}
-
-.submit__form textarea {
-	padding: 0;
-	padding: 30px 23px;
-}
-
 .services__border {
 	border-radius: 20px;
 	border: 5px solid #caa3e1;
@@ -1410,124 +1356,7 @@ button {
 	}
 }
 
-.feedback {
-	//height: 100%;
-	text-align: center;
-	padding-top: 3%;
-	position: relative;
-	background: url("../img/feedback/star-right.png") 100% -20%/60% no-repeat;
-
-	&::before {
-		// content: url("../img/feedback/star-left.png");
-		content: "";
-		background: url(../img/feedback/star-right.png);
-		background-size: 100%;
-		position: absolute;
-		left: -5%;
-		top: 0;
-		width: 42%;
-		height: 35%;
-		height: auto;
-	}
-
-	&__title-block {
-		@include centry(88%);
-		@include fonty(20px, 400, 20px);
-
-		h2 {
-			@include fontSizy(20px, 25, 1920);
-			line-height: 100%;
-			font-weight: 600;
-			color: #f5e4f7;
-		}
-
-		p {
-			@include fontSizy(18px, 17, 1920);
-			line-height: 100%;
-			color: $pink;
-			margin: 20px 0;
-
-			span {
-				text-transform: uppercase;
-				font-weight: 700;
-			}
-		}
-	}
-
-	&__wrapper {
-		@include centry(96%);
-
-		&-text {
-			display: none;
-		}
-
-		.feedback-img {
-			position: relative;
-			height: $myHeight;
-
-			&__name {
-				display: none;
-			}
-
-			&__badge {
-				color: white;
-				font-size: calc(11px + 21 * ((100vw - 378px) / 1366));
-				line-height: calc(11px + 21 * ((100vw - 378px) / 1366));
-				width: calc(45vw + 35 * (100vw - 378px) / 1366);
-				//спорный вопрос стоит ли ограничивать по ширине бейдж т.к. даже на 1920рх он не дотягивает до 1253рх
-				//max-width: 1253px;
-				border: 1px solid white;
-				border-radius: 20px;
-				position: absolute;
-				top: calc($myHeight - 52%);
-				right: calc(($myHeight * 0.675) / 100 * 56);
-				padding: $feedbackPadding;
-				//due to bootstrap
-				white-space: normal;
-
-				span {
-					color: #4c2f5e;
-				}
-			}
-
-			picture {
-				object-fit: contain;
-				display: block;
-				height: inherit;
-
-				img {
-					height: inherit;
-					float: right;
-					position: relative;
-					z-index: 2;
-				}
-			}
-		}
-	}
-
-	&__footer {
-		color: white;
-		background: #220438;
-		padding: 5px;
-		@include flexy(column);
-		gap: calc(5px + 20 * ((100vw - 768px) / 1366));
-
-		&-up {
-			@include fontSizy(14px, 18, 1920);
-			font-weight: 700;
-			line-height: 100%;
-			//line-height: 20px;	- according to the layout
-			padding-bottom: 15px;
-		}
-
-		h4 {
-			@include fontSizy(16px, 10, 1920);
-			font-weight: 500;
-			line-height: 0.95em;
-			padding-bottom: 5px;
-		}
-	}
-}
+@import "./feedback";
 
 .footer {
 	background: #220438;
@@ -1586,16 +1415,6 @@ button {
 	.client__desc:nth-child(3):before {
 		bottom: 73px;
 	}
-
-	.feedback__wrapper {
-		&-text {
-			display: block;
-			@include fontSizy(16px, 19, 1920);
-			line-height: 100%;
-			@include centry(80%);
-			color: #e7d8e8;
-		}
-	}
 }
 
 @media (min-width: 768px) {
@@ -1643,22 +1462,10 @@ button {
 			width: 50%;
 		}
 	}
-
-	.feedback-img {
-		&__badge {
-			&::before {
-				content: url("../img/feedback/pin.png");
-				width: 71px;
-				height: 71px;
-				position: absolute;
-				bottom: 85%;
-				left: calc(0% + 116 * ((100vw - 768px) / 1920));
-			}
-		}
-	}
 }
 
 @media (min-width: 1024px) {
+
 	// Общие
 	.title {
 		font-size: 45px;
@@ -1800,6 +1607,7 @@ button {
 		background: #220438;
 		padding-bottom: 183px;
 		color: $superlightpurple;
+
 		&__title {
 			&::before {
 				width: 1230px;
@@ -1810,6 +1618,7 @@ button {
 				z-index: 1;
 			}
 		}
+
 		&__wrapper {
 			background-position: right 0px top -20px;
 		}
@@ -1820,9 +1629,14 @@ button {
 			justify-content: space-between;
 			width: calc(50% - 10px);
 		}
+		
+		&__img {
+			height: auto;
+		}
 
 		&__wrapper-right {
 			width: calc(50% - 10px);
+			margin-top: auto;
 		}
 
 		.about__item-title {
@@ -1911,10 +1725,12 @@ button {
 			// justify-content: start;
 		}
 	}
+
 	.social img {
 		width: 67px;
 		height: 67px;
 	}
+
 	// Блок Услуги
 	.services {
 		&__wrapper {
@@ -2056,6 +1872,7 @@ button {
 			line-height: 40px;
 			color: #eebcef;
 			position: relative;
+
 			::after {
 				bottom: 0;
 				right: -7%;
@@ -2065,6 +1882,7 @@ button {
 
 			p:nth-child(1) {
 				margin-bottom: 30px;
+
 				&:before {
 					width: 55px;
 					height: 55px;
@@ -2075,7 +1893,7 @@ button {
 			}
 
 			span {
-				// color: #971ce3;
+				color: #971ce3;
 				font-size: 35px;
 				font-weight: 700;
 				line-height: 30px;
@@ -2236,58 +2054,9 @@ button {
 		}
 	}
 
-	.feedback {
-		&__wrapper {
-			position: relative;
-
-			&-text {
-				display: block;
-				@include fontSizy(16px, 19, 1920);
-				line-height: 100%;
-				@include centry(58%);
-				color: #e7d8e8;
-				position: absolute;
-				left: 0;
-				right: 0;
-				top: 20px;
-			}
-
-			.feedback-img {
-				&__name {
-					display: block;
-					font-family: $BodegaScript;
-					@include fontSizy(28px, 20, 1920);
-					color: #eebcef;
-					position: absolute;
-					top: 27vh;
-					left: 0;
-					right: 0;
-				}
-
-				&__badge {
-					width: calc(58vw + 35 * (100vw - 378px) / 1366);
-					margin-bottom: 20px;
-				}
-			}
-		}
-		.social img {
-			width: 30px;
-			height: 30px;
-		}
-
-		&__footer {
-			position: absolute;
-			left: 0;
-			right: -10%;
-			width: calc(45vw + 35 * (100vw - 378px) / 1366);
-			bottom: 0;
-			margin: auto;
-			background: none;
-		}
-	}
-
 	.footer {
 		font-size: 16px;
+
 		&__inner {
 			display: flex;
 			flex-direction: column;
@@ -2328,7 +2097,7 @@ button {
 		&__btn {
 			align-items: first baseline;
 		}
-		
+
 		&__info {
 			padding-top: 30px;
 		}
@@ -2430,12 +2199,17 @@ button {
 	.first {
 		&__name {
 			font-size: 77px;
-			line-height: 77px;
+			// line-height: px;
+			line-height: 58px;
 			text-align: initial;
 		}
 
 		&__wrapper-h1 {
 			justify-content: start;
+		}
+		
+		&__wrapper-title .title {
+			padding-bottom: 10px;
 		}
 
 		&__avtor,
@@ -2639,41 +2413,4 @@ button {
 			}
 		}
 	}
-}
-
-@media (max-aspect-ratio: 9/18) {
-	.feedback__wrapper {
-		width: 100%;
-		$appleHeight: 53vh;
-
-		.feedback-img {
-			height: $appleHeight;
-
-			&__badge {
-				font-size: calc(17px + 21 * ((100vw - 378px) / 1366));
-				line-height: calc(17px + 21 * ((100vw - 378px) / 1366));
-				width: calc(46vw + 35 * (100vw - 378px) / 1366);
-				right: calc(($appleHeight * 0.675) / 100 * 56);
-				top: calc($appleHeight - 52.5%);
-			}
-		}
-	}
-}
-
-@media (max-width: 820px) and (min-aspect-ratio: 10/16) {
-	.feedback__wrapper {
-		width: 100%;
-
-		.feedback-img {
-			&__badge {
-				font-size: calc(17px + 21 * ((100vw - 378px) / 1366));
-				line-height: calc(17px + 21 * ((100vw - 378px) / 1366));
-				width: calc(50vw + 35 * (100vw - 378px) / 1366);
-				top: calc($myHeight - 52.5%);
-				right: calc(($myHeight * 0.675) / 100 * 57.5);
-			}
-		}
-	}
-
-	//it shall be conversated that on devices that have aspect ration 10/16 & width =< 900px - paragraph about consultation looks not very nice
 }

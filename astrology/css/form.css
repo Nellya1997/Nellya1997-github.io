@@ -1,6 +1,28 @@
 .submit {
   box-sizing: border-box;
 }
+.submit::before {
+  content: "";
+  background-image: url("../img/submit/circle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 2%;
+}
+.submit::after {
+  content: "";
+  background-image: url("../img/submit/comet.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 85%;
+  height: 65%;
+  position: absolute;
+  right: 0;
+  top: 5%;
+}
 .submit__title.title {
   line-height: 45px;
 }
@@ -51,10 +73,13 @@
 }
 .submit__form .form-check-label {
   display: inline;
+  position: relative;
   line-height: 1.5em;
+  z-index: 2;
 }
 .submit__form .form-check-label a {
   text-decoration: underline;
+  z-index: 2;
 }
 .submit__form__button {
   padding-bottom: 7.63vw;
@@ -71,6 +96,7 @@
   border: 0;
   color: #4c2f5e;
   box-shadow: 0px 5px 10px 0px rgba(40, 9, 51, 0.5019607843);
+  z-index: 2;
 }
 .submit__form__button input:hover {
   background: linear-gradient(180deg, #b896d1 0%, #935abb 100%);
