@@ -553,13 +553,13 @@ button {
 		::after {
 			position: absolute;
 			content: "";
-			background: url("../img/client/client-planet.png") no-repeat;
+			background: url(../img/client/client-planet.png) no-repeat;
 			background-position: bottom right;
 			background-size: contain;
-			bottom: 0;
+			bottom: 35px;
 			right: -4%;
-			width: 166px;
-			height: 156px;
+			width: 75px;
+			height: 147px;
 			z-index: -1;
 		}
 
@@ -581,7 +581,8 @@ button {
 		}
 
 		span {
-			color: #4c2f5e;
+			// color: #4c2f5e;
+			color: #971ce3;
 			font-weight: 600;
 		}
 	}
@@ -2074,7 +2075,7 @@ button {
 			}
 
 			span {
-				color: #971ce3;
+				// color: #971ce3;
 				font-size: 35px;
 				font-weight: 700;
 				line-height: 30px;
