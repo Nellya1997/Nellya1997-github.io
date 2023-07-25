@@ -493,8 +493,33 @@ button {
   text-align: center;
   transition: 0.3s;
 }
+.nav__menu .close {
+  position: absolute;
+  top: 24px;
+  right: 14px;
+  width: 33px;
+  height: 30px;
+  cursor: pointer;
+}
+.nav__menu .close::after, .nav__menu .close::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 33px;
+  height: 4px;
+  border-radius: 8px;
+  margin: 5px auto;
+  background-color: #f4dff5;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(8px) rotate(45deg);
+}
+.nav__menu .close::before {
+  transform: translateY(8px) rotate(-45deg);
+}
 .nav__menu.active {
   right: 0;
+  height: 52vh;
 }
 .nav__menu__title {
   color: #523960;
@@ -544,7 +569,7 @@ button {
 }
 
 .burger {
-  z-index: 16;
+  z-index: 2;
   display: block;
   cursor: pointer;
   margin-left: 40px;
@@ -763,8 +788,8 @@ button {
   background-size: contain;
   bottom: 0;
   right: -4%;
-  width: 166px;
-  height: 156px;
+  width: 82px;
+  height: 55px;
   z-index: -1;
 }
 .client__desc p:nth-child(1) {
@@ -865,9 +890,19 @@ button {
   margin-bottom: 20px;
   position: relative;
 }
-.client .swiper__slide-desc img {
+.client .swiper__slide-desc p:nth-child(1) {
+  position: relative;
+  margin-bottom: 100px;
+}
+.client .swiper__slide-desc p:nth-child(1)::after {
+  content: url("../img/client/arrow.png");
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 106%;
   width: 18px;
   height: 66px;
+  position: absolute;
 }
 .client .swiper__slide-desc p {
   color: #e7d8e8;
@@ -887,7 +922,7 @@ button {
 .client .swiper-button-next {
   background: url(../img/client/next.png) no-repeat;
   left: auto;
-  right: calc(50% - 54px);
+  right: calc(50% - 80px);
   top: auto;
   bottom: 0px;
   width: 45px;
@@ -895,11 +930,14 @@ button {
 }
 .client .swiper-button-prev {
   background: url(../img/client/prev.png) no-repeat;
-  left: calc(50% - 54px);
+  left: calc(50% - 80px);
   top: auto;
   bottom: 0px;
   width: 45px;
   height: 45px;
+}
+.client .swiper-pagination-bullet {
+  background: #e7d8e8;
 }
 .client .swiper-button-next::after, .client .swiper-button-prev::after {
   display: none;
@@ -971,7 +1009,7 @@ button {
 .about__title::before {
   content: "";
   position: absolute;
-  background: url(../img/client/star.png) no-repeat;
+  background: url(../img/client/star.png);
   background-size: contain;
   width: 80%;
   height: 200%;
@@ -991,23 +1029,21 @@ button {
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
-  height: 341px;
+  height: 210px;
 }
 .about__img::after {
-  position: absolute;
-  bottom: 0%;
-  left: 0;
-  width: 100%;
-  height: 20%;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #220438);
+  background: url(../img/about/about-bg.png) no-repeat;
+  background-size: 123%;
   content: "";
-  z-index: 1;
+  width: 100%;
+  background-color: red;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .about__items {
   z-index: 3;
-}
-.about__dlex-desktop {
-  display: flex;
 }
 .about__item {
   padding-left: 40px;
@@ -1178,6 +1214,7 @@ button {
   font-weight: 500;
   line-height: 0.4;
   margin-bottom: 50px;
+  padding-top: 30px;
 }
 .method__border {
   position: relative;
@@ -1533,11 +1570,14 @@ button {
     top: calc(50vh - 52%);
     right: 18.9vh;
   }
+  .feedback-wrapper__badge span {
+    color: #F2EDF5;
+  }
   .feedback-wrapper__down {
     width: 100%;
     position: static;
     background: #220438;
-    padding: 10px 5px 10px 30px;
+    padding: 23px 5px 10px 30px;
   }
 }
 @media (min-width: 600px) and (max-aspect-ratio: 15/16) and (orientation: portrait) {
@@ -1609,6 +1649,9 @@ button {
   .client__desc:nth-child(3):before {
     bottom: 73px;
   }
+  .about__img {
+    height: 310px;
+  }
 }
 @media (min-width: 768px) {
   .container {
@@ -1620,6 +1663,14 @@ button {
   }
   .about__wrapperNew .picture {
     height: 500px;
+  }
+  .about__wrapper {
+    background-position: top 2% right 35px;
+    background-size: 50%;
+  }
+  .about__img {
+    background-position: top 49% right 36%;
+    background-size: 81%;
   }
   .consultation__link .link {
     padding: 18px 63px;
@@ -1750,7 +1801,8 @@ button {
     z-index: 1;
   }
   .about__wrapper {
-    background-position: right 0px top -20px;
+    background-position: top 34px right -74%;
+    background-size: 80%;
   }
   .about__wrapperNew {
     display: flex;
@@ -1982,17 +2034,34 @@ button {
   .client .swiper__slide-title {
     font-size: 32px;
     padding: 25px 50px;
+    margin-bottom: 40px;
+    line-height: 30px;
   }
   .client .swiper__slide-desc img {
     width: 455px;
     height: 42px;
   }
   .client .swiper__slide-desc {
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: start;
     display: flex;
-    gap: 30px;
-    margin-bottom: 60px;
+    gap: 360px;
+    margin-bottom: 0px;
+  }
+  .client .swiper__slide-desc p:nth-child(1) {
+    position: relative;
+    margin-bottom: 50px;
+  }
+  .client .swiper__slide-desc p:nth-child(1)::after {
+    content: url("../img/client/arrow-desktop.png");
+    left: 115%;
+    right: 0;
+    zoom: 60%;
+    margin: inherit;
+    top: 6%;
+    width: 448px;
+    height: 42px;
+    position: absolute;
   }
   .client .swiper__slide-desc p {
     line-height: 30px;
@@ -2109,12 +2178,34 @@ button {
   }
 }
 @media (min-width: 1440px) {
-  .client .star {
-    bottom: -5%;
-    width: 60%;
+  .client .swiper__slide-desc {
+    justify-content: space-between;
+    align-items: start;
+    display: flex;
+    gap: 500px;
+    margin-bottom: 0px;
+  }
+  .client .swiper__slide-desc p:nth-child(1) {
+    position: relative;
+    margin-bottom: 100px;
+  }
+  .client .swiper__slide-desc p:nth-child(1)::after {
+    content: url("../img/client/arrow-desktop.png");
+    left: 107%;
+    right: 0;
+    zoom: 90%;
+    margin: inherit;
+    top: 4%;
+    width: 448px;
+    height: 42px;
+    position: absolute;
   }
   .about__item:nth-child(2) {
     max-width: 800px;
+  }
+  .about__wrapper {
+    background-position: center right -84%;
+    background-size: 80%;
   }
   .about__dlex-desktop {
     margin-bottom: 0;
@@ -2238,6 +2329,10 @@ button {
 @media (min-width: 1920px) {
   .title {
     margin-bottom: 0;
+  }
+  .about__wrapper {
+    background-position: center right -17%;
+    background-size: 60%;
   }
   .nav__list-link {
     font-size: 24px;

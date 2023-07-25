@@ -240,8 +240,37 @@ button {
 		text-align: center;
 		transition: 0.3s;
 
+		& .close {
+			position: absolute;
+			top: 24px;
+			right: 14px;
+			width: 33px;
+    		height: 30px;
+			cursor: pointer;
+
+			&::after,
+			&::before {
+				position: absolute;
+				top: 0;
+				right: 0;
+				content: '';
+				width: 33px;
+				height: 4px;
+				border-radius: 8px;
+				margin: 5px auto;
+				background-color: $light-pink;
+				transition: all 0.3s ease-in-out;
+				transform: translateY(8px) rotate(45deg);
+			}
+			
+			&::before {
+				transform: translateY(8px) rotate(-45deg);
+			}
+		}
+
 		&.active {
 			right: 0;
+			height: 52vh;
 		}
 
 		&__title {
@@ -305,7 +334,7 @@ button {
 // Бургер
 
 .burger {
-	z-index: 16;
+	z-index: 2;
 	display: block;
 	cursor: pointer;
 	margin-left: 40px;
@@ -562,8 +591,8 @@ button {
 			background-size: contain;
 			bottom: 0;
 			right: -4%;
-			width: 166px;
-			height: 156px;
+			width: 82px;
+			height: 55px;
 			z-index: -1;
 		}
 
@@ -693,10 +722,26 @@ button {
 		&__slide-desc {
 			margin-bottom: 20px;
 
-			img {
-				width: 18px;
-				height: 66px;
+			p:nth-child(1) {
+				position: relative;
+				margin-bottom: 100px;
+
+				&::after {
+					content: url("../img/client/arrow.png");
+					left: 0;
+					right: 0;
+					margin: 0 auto;
+					top: 106%;
+					width: 18px;
+					height: 66px;
+					position: absolute;
+				}
 			}
+
+			// img {
+			// 	width: 18px;
+			// 	height: 66px;
+			// }
 
 			position: relative;
 
@@ -723,7 +768,7 @@ button {
 		&-button-next {
 			background: url(../img/client/next.png) no-repeat;
 			left: auto;
-			right: calc(50% - 54px);
+			right: calc(50% - 80px);
 			top: auto;
 			bottom: 0px;
 			width: 45px;
@@ -732,11 +777,15 @@ button {
 
 		&-button-prev {
 			background: url(../img/client/prev.png) no-repeat;
-			left: calc(50% - 54px);
+			left: calc(50% - 80px);
 			top: auto;
 			bottom: 0px;
 			width: 45px;
 			height: 45px;
+		}
+
+		&-pagination-bullet {
+			background: #e7d8e8;
 		}
 
 		&-button-next::after,
@@ -818,7 +867,7 @@ button {
 		&::before {
 			content: "";
 			position: absolute;
-			background: url(../img/client/star.png) no-repeat;
+			background: url(../img/client/star.png);
 			background-size: contain;
 			width: 80%;
 			height: 200%;
@@ -831,7 +880,6 @@ button {
 	}
 
 	.picture {
-
 		&::after,
 		&::before {
 			display: none;
@@ -843,55 +891,44 @@ button {
 	}
 
 	&__img {
+
 		object-fit: cover;
 		position: relative;
-		height: 341px;
-
-		&::after {
-			// content: '';
-			position: absolute;
-			bottom: 0%;
-			left: 0;
-			width: 100%;
-			height: 20%;
-			background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #220438);
-			content: "";
-			z-index: 1;
-		}
-
-		// img {
-		// 	z-index: 1;
-		// 	position: absolute;
-		// 	width: 270px;
-		// 	height: 448px;
-		// 	right: -15px;
-		// 	top: -17%;
-		// 	object-fit: cover;
+		height: 210px;
+		// background: url(../img/about/about-bg.png) no-repeat;
+		// background-position: top 49% right 68%;
+		// background-size: 123%;
 
 		// &::after {
 		// 	content: "";
 		// 	position: absolute;
-		// 	top: 0;
+		// 	bottom: 0%;
 		// 	left: 0;
 		// 	width: 100%;
 		// 	height: 20%;
 		// 	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #220438);
-		// 	content: "";
-		// 	z-index: 11;
+		// 	// content: "";
+		// 	z-index: 1;
 		// }
+
+		&::after {
+			background: url(../img/about/about-bg.png) no-repeat;
+			// background-position: top 49% right 68%;
+			background-size: 123%;
+			content: '';
+			width: 100%;
+			background-color: red;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 	}
 
 	&__items {
 		z-index: 3;
 	}
 
-	&__dlex-desktop {
-		display: flex;
-	}
-
-	// &__info {
-	// 	position: absolute;
-	// }
 	&__item {
 		padding-left: 40px;
 		position: relative;
@@ -1100,6 +1137,7 @@ button {
 		font-weight: 500;
 		line-height: 0.4;
 		margin-bottom: 50px;
+		padding-top: 30px;
 	}
 
 	&__border {
@@ -1415,6 +1453,11 @@ button {
 	.client__desc:nth-child(3):before {
 		bottom: 73px;
 	}
+	.about {
+		&__img {
+			height: 310px;
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -1436,15 +1479,15 @@ button {
 				height: 500px;
 			}
 		}
-
-		// &__img img {
-		// 	z-index: 1;
-		// 	position: absolute;
-		// 	width: 486px;
-		// 	height: 608px;
-		// 	right: -78px;
-		// 	top: -133px;
-		// }
+		&__wrapper {
+			background-position: top 2% right 35px;
+			background-size: 50%;
+		}
+		
+		&__img {
+			background-position: top 49% right 36%;
+    		background-size: 81%;
+		}
 	}
 
 	.consultation {
@@ -1465,7 +1508,6 @@ button {
 }
 
 @media (min-width: 1024px) {
-
 	// Общие
 	.title {
 		font-size: 45px;
@@ -1620,7 +1662,8 @@ button {
 		}
 
 		&__wrapper {
-			background-position: right 0px top -20px;
+			background-position: top 34px right -74%;
+			background-size: 80%;
 		}
 
 		&__wrapperNew {
@@ -1629,7 +1672,7 @@ button {
 			justify-content: space-between;
 			width: calc(50% - 10px);
 		}
-		
+
 		&__img {
 			height: auto;
 		}
@@ -1739,7 +1782,7 @@ button {
 			// justify-content: space-between;
 			flex-wrap: wrap;
 			max-width: 80%;
-    		margin: 0 auto;
+			margin: 0 auto;
 		}
 
 		// &__accordion {
@@ -1922,6 +1965,8 @@ button {
 			&__slide-title {
 				font-size: 32px;
 				padding: 25px 50px;
+				margin-bottom: 40px;
+				line-height: 30px;
 			}
 
 			&__slide-desc img {
@@ -1930,11 +1975,27 @@ button {
 			}
 
 			&__slide-desc {
-				justify-content: center;
-				align-items: center;
+				justify-content: space-between;
+				align-items: start;
 				display: flex;
-				gap: 30px;
-				margin-bottom: 60px;
+				gap: 360px;
+				margin-bottom: 0px;
+
+				p:nth-child(1) {
+					position: relative;
+					margin-bottom: 50px;
+					&::after {
+						content: url("../img/client/arrow-desktop.png");
+						left: 115%;
+						right: 0;
+						zoom: 60%;
+						margin: inherit;
+						top: 6%;
+						width: 448px;
+						height: 42px;
+						position: absolute;
+					}
+				}
 			}
 
 			&__slide-desc p {
@@ -2074,9 +2135,29 @@ button {
 }
 
 @media (min-width: 1440px) {
-	.client .star {
-		bottom: -5%;
-		width: 60%;
+	.client .swiper__slide-desc {
+		justify-content: space-between;
+		align-items: start;
+		display: flex;
+		gap: 500px;
+		margin-bottom: 0px;
+
+		p:nth-child(1) {
+			position: relative;
+			margin-bottom: 100px;
+
+			&::after {
+				content: url("../img/client/arrow-desktop.png");
+				left: 107%;
+				right: 0;
+				zoom: 90%;
+				margin: inherit;
+				top: 4%;
+				width: 448px;
+				height: 42px;
+				position: absolute;
+			}
+		}
 	}
 
 	.about {
@@ -2084,6 +2165,10 @@ button {
 			&:nth-child(2) {
 				max-width: 800px;
 			}
+		}
+		&__wrapper {
+			background-position: center right -84%;
+			background-size: 80%;
 		}
 
 		&__dlex-desktop {
@@ -2207,7 +2292,7 @@ button {
 		&__wrapper-h1 {
 			justify-content: start;
 		}
-		
+
 		&__wrapper-title .title {
 			padding-bottom: 10px;
 		}
@@ -2259,7 +2344,10 @@ button {
 		margin-bottom: 0;
 		// padding-bottom: 18px;
 	}
-
+	.about__wrapper {
+		background-position: center right -17%;
+		background-size: 60%;
+	}
 	.nav__list-link {
 		font-size: 24px;
 	}

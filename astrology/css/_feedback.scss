@@ -167,13 +167,18 @@ $yellowRatio: 40vh;
 				width: 55%;
 				top: calc($mobileHeight - 52%);
 				right: calc(($mobileHeight * 0.675) / 100 * 56);
+
+
+				span {
+					color: #F2EDF5;
+				}
 			}
 
 			&__down {
 				width: 100%;
 				position: static;
 				background: #220438;
-				padding: 10px 5px 10px 30px;
+				padding: 23px 5px 10px 30px;
 			}
 		}
 	}

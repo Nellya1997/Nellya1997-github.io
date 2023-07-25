@@ -1,9 +1,13 @@
 // Swiper client
 const swiper = new Swiper('.swiper', {
   spaceBetween: 30,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
 
@@ -34,16 +38,23 @@ faq.forEach((element) => {
   });
 });
 
-// Навигация          
+// Навигация
 const burger = document.querySelector('.burger');
 const navMenu = document.querySelector('.nav__menu');
-const body = document.body;
+// const body = document.body;
+const close = document.querySelector('.close');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');
   navMenu.classList.toggle('active');
-  body.classList.toggle('noscroll');
+  // body.classList.toggle('noscroll');
+  // close.style.cssText = 'opacity: 0';
+  burger.classList.remove('active');
 });
+
+close.addEventListener('click', () => {
+  navMenu.classList.remove('active');
+})
 
 const app = () => {
   const form = document.querySelector('.submit__form');
@@ -134,7 +145,11 @@ const app = () => {
       id: 'services',
       value: cart.getAll(),
     };
-    const formElements = [...formPay.querySelectorAll('.form-control'), payMetod, services];
+    const formElements = [
+      ...formPay.querySelectorAll('.form-control'),
+      payMetod,
+      services,
+    ];
     const formValues = formElements.reduce((acc, element) => {
       const { id, value } = element;
       acc[id] = value;
@@ -161,10 +176,9 @@ const app = () => {
       }
     }
   });
-}
+};
 
 app();
-
 
 //перетаскивание DOM-узлов по странице будет описано ниже:
 
@@ -186,16 +200,20 @@ const firstResize = () => {
     } else if (window.screen.width < 1023) {
       //take link and advantages to the right
       rightSideUp.appendChild(link);
-      document.querySelector('.first__advantages-moving').appendChild(advantages);
+      document
+        .querySelector('.first__advantages-moving')
+        .appendChild(advantages);
     }
-  };
+  }
 
   resize();
 
   window.addEventListener('resize', resize);
-}
+};
 
 firstResize();
+
+
 
 //  section feedback
 const feedbackResize = () => {
@@ -214,27 +232,36 @@ const feedbackResize = () => {
   resize();
 
   window.addEventListener('resize', resize);
-}
+};
 
 feedbackResize();
 
+//section about
+const aboutResize = () => {
+  const img = document.querySelector('.js-about-pic');
+  const badge = document.querySelector('.about__lead');
+  const aboutInfo = document.querySelector('.about__info');
+  const aboutInfo2 = document.querySelector('.about__info-wrapper');
 
 
+  const rightSide = document.querySelector('.about__wrapper-right');
+  const leftSide = document.querySelector('.about__wrapperNew');
 
-// ЖЕНЯ ДОБАВЬ РЕСАЙЗ 
-
-
-const aboutRightWrapper = document.querySelector('.about__wrapper-right');
-const aboutPicture = document.querySelector('.js-about-pic');
-const aboutLead = document.querySelector('.about__lead');
-const aboutInfo = document.querySelector('.about__info');
-const aboutBigWrapper = document.querySelector('.about__wrapperNew');
-
-if (window.screen.width > 1023) {
-  aboutRightWrapper.append(aboutPicture);
-  aboutRightWrapper.append(aboutLead);
-
-  if (window.screen.width > 1919) {
-    aboutBigWrapper.append(aboutInfo);
+  function resize() {
+    if (window.screen.width > 1450) {
+      rightSide.appendChild(img);
+      rightSide.appendChild(badge);
+      leftSide.appendChild(aboutInfo);
+    } else if (window.screen.width < 1450) {
+      aboutInfo2.appendChild(aboutInfo);
+      rightSide.appendChild(img);
+      rightSide.appendChild(badge);
+    }
   }
-}
+
+  resize();
+
+  window.addEventListener('resize', resize);
+};
+
+aboutResize();
