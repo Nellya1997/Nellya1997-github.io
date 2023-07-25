@@ -36,43 +36,47 @@ $yellowRatio: 40vh;
 		top: 0;
 	}
 
-	&__title-block {
-		@include centry(88%);
-		@include fonty(20px, 400, 20px);
-
-		h2 {
-			@include fontSizy(20px, 25, 1920);
-			line-height: 100%;
-			font-weight: 600;
-			color: #f5e4f7;
-		}
-
-		p {
-			@include fontSizy(18px, 17, 1920);
-			line-height: 100%;
-			color: $pink;
-			margin: 10px 0;
-
-			span {
-				text-transform: uppercase;
-				font-weight: 700;
-			}
-		}
-	}
-
 	&-wrapper {
 		@include centry(96%);
 		position: relative;
 		height: $PcHeight;
 
+		&__title {
+			@include fonty(20px, 400, 20px);
+			width: 60%;
+			position: absolute;
+			top: calc($PcHeight - 104%);
+			right: calc(($PcHeight * 0.675) - 11%);
+
+			h2 {
+				@include fontSizy(17px, 25, 1920);
+				line-height: 100%;
+				font-weight: 600;
+				color: #f5e4f7;
+			}
+
+			p {
+				@include fontSizy(14px, 17, 1920);
+				line-height: 100%;
+				color: $pink;
+				margin: 10px 0;
+
+				span {
+					text-transform: uppercase;
+					font-weight: 700;
+				}
+			}
+		}
+
 		&__text {
-			@include fontSizy(16px, 19, 1920);
+			@include fontSizy(14px, 22, 1920);
 			line-height: 100%;
-			@include centry(50%);
 			color: #e7d8e8;
-			width: 51.45%;
+			width: 55%;
 			position: absolute;
 			top: calc($PcHeight - 88%);
+			//чтобы все отображолось по макету я считал соотношение W/H = 0.675;
+			//изза корректировок заказчика двигаем все влево поэтому накидываю к коэф 0.025;
 			right: calc(($PcHeight * 0.675) - 8%);
 		}
 
@@ -89,7 +93,7 @@ $yellowRatio: 40vh;
 			color: white;
 			font-size: calc(14px + 18 * ((100vw - 378px) / 1366));
 			line-height: calc(14px + 18 * ((100vw - 378px) / 1366));
-			width: 65.2%;
+			width: 68%;
 			position: absolute;
 			top: calc($PcHeight - 52%);
 			right: calc(($PcHeight * 0.675) / 100 * 56);
@@ -119,15 +123,24 @@ $yellowRatio: 40vh;
 		}
 
 		&__down {
-			@include fontSizy(14px, 18, 1920);
+			@include fontSizy(13px, 18, 1920);
 			color: white;
 			font-weight: 700;
 			line-height: 100%;
 			width: 60.5%;
 			position: absolute;
 			top: calc($PcHeight - 27%);
-			right: calc(($PcHeight * 0.675) / 100 * 56);
+			right: calc(($PcHeight * 0.675) - 11%)
 		}
+	}
+}
+
+
+@media (max-width: 1024px) {
+	.feedback-wrapper__title {
+		@include fonty(20px, 400, 20px);
+		@include centry(90%);
+		position: static;
 	}
 }
 
@@ -167,6 +180,7 @@ $yellowRatio: 40vh;
 				width: 55%;
 				top: calc($mobileHeight - 52%);
 				right: calc(($mobileHeight * 0.675) / 100 * 56);
+				padding: 5px 10px;
 
 
 				span {

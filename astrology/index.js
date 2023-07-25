@@ -85,13 +85,21 @@ const app = () => {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formElements = [...form.querySelectorAll('.form-control')];
+    const emptyFields = formElements.filter((node) => {
+      node.setAttribute('minlength', 3);
+      node.setAttribute('required', '');
+      form.classList.add('was-validated');
+      if (node.value.length < 3) {
+        return node;
+      }
+    });
+    if (emptyFields.length !== 0) return;
+
     const formValues = formElements.reduce((acc, element) => {
       const { id, value } = element;
       acc[id] = value;
       return acc;
     }, {});
-
-    form.classList.add('was-validated');
 
     try {
       await axios.post(routes.sendEmail, formValues);
@@ -111,7 +119,7 @@ const app = () => {
 
   //formPay
   const formPay = document.getElementById('formPay');
-  const checkBoxPay = formPay.querySelector('input[type=checkbox]');
+  const checkBoxPay = formPay.querySelector('#acceptPay');
   const submitButtonPay = formPay.querySelector('input[type=submit]');
 
   const isCheckPay = checkBoxPay.checked;
@@ -139,24 +147,41 @@ const app = () => {
     e.preventDefault();
     const payMetod = {
       id: 'pay',
-      value: formPay.querySelector('input[type=radio]:checked').textContent,
+      value: formPay.querySelector('input[type=radio]:checked').value,
+    };
+    const messengers = {
+      id: 'messengers',
+      value: [...formPay.querySelectorAll('.messenger:checked')].map((messenger) => messenger.id),
+    };
+    const grandTotal = {
+      id: 'grandTotal',
+      value: cart.getPriceAll(),
     };
     const services = {
       id: 'services',
       value: cart.getAll(),
     };
-    const formElements = [
-      ...formPay.querySelectorAll('.form-control'),
-      payMetod,
-      services,
-    ];
+    const formElements = [...formPay.querySelectorAll('.form-control')];
+    const emptyFields = formElements.filter((node) => {
+      if (node.id === 'socialUrl') return;
+      node.setAttribute('minlength', 3);
+      node.setAttribute('required', '');
+      formPay.classList.add('was-validated');
+      if (node.id === 'phone') {
+        node.setAttribute('minlength', 11);
+      }
+      if (node.value.length < 3) {
+        return node;
+      }
+    });
+    if (emptyFields.length !== 0) return;
+
+    formElements.push(payMetod, services, messengers, grandTotal);
     const formValues = formElements.reduce((acc, element) => {
       const { id, value } = element;
       acc[id] = value;
       return acc;
     }, {});
-
-    formPay.classList.add('was-validated');
 
     try {
       await axios.post(routes.sendEmailPay, formValues);
@@ -213,29 +238,6 @@ const firstResize = () => {
 
 firstResize();
 
-
-
-//  section feedback
-const feedbackResize = () => {
-  const feedback = document.querySelector('.feedback');
-  const feedbackWrapper = document.querySelector('.feedback-wrapper');
-  const text = document.querySelector('.feedback-wrapper__down');
-
-  function resize() {
-    if (window.screen.width < 600) {
-      feedback.appendChild(text);
-    } else if (window.screen.width > 600) {
-      feedbackWrapper.appendChild(text);
-    }
-  }
-
-  resize();
-
-  window.addEventListener('resize', resize);
-};
-
-feedbackResize();
-
 //section about
 const aboutResize = () => {
   const img = document.querySelector('.js-about-pic');
@@ -265,3 +267,30 @@ const aboutResize = () => {
 };
 
 aboutResize();
+
+//  section feedback
+const feedbackResize = () => {
+  const feedback = document.querySelector('.feedback');
+  const wrapper = document.querySelector('.feedback-wrapper');
+  const text = document.querySelector('.feedback-wrapper__down');
+  const title = document.querySelector('.feedback-wrapper__title');
+
+
+  function resize() {
+    if (window.screen.width < 1024) {
+      feedback.prepend(title);
+    } else if (window.screen.width > 1024) {
+      wrapper.prepend(title);
+    } else if (window.screen.width < 600) {
+      feedback.appendChild(text);
+    } else if (window.screen.width > 600) {
+      wrapper.appendChild(text);
+    }
+  }
+
+  resize();
+
+  window.addEventListener('resize', resize);
+};
+
+feedbackResize();
