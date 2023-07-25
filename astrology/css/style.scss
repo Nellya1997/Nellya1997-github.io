@@ -615,7 +615,7 @@ button {
 		}
 
 		span {
-			color: #4c2f5e;
+			color: #971ce3;
 			font-weight: 600;
 		}
 	}
@@ -895,9 +895,9 @@ button {
 		object-fit: cover;
 		position: relative;
 		height: 210px;
-		// background: url(../img/about/about-bg.png) no-repeat;
-		// background-position: top 49% right 68%;
-		// background-size: 123%;
+		background: url(../img/about/about-bg.png) no-repeat;
+		background-position: top 49% right 117%;
+    	background-size: 103%;
 
 		// &::after {
 		// 	content: "";
@@ -911,18 +911,18 @@ button {
 		// 	z-index: 1;
 		// }
 
-		&::after {
-			background: url(../img/about/about-bg.png) no-repeat;
-			// background-position: top 49% right 68%;
-			background-size: 123%;
-			content: '';
-			width: 100%;
-			background-color: red;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
+		// &::after {
+		// 	background: url(../img/about/about-bg.png) no-repeat;
+		// 	// background-position: top 49% right 68%;
+		// 	background-size: 123%;
+		// 	content: '';
+		// 	width: 100%;
+		// 	background-color: red;
+		// 	height: 100%;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// }
 	}
 
 	&__items {
@@ -1485,8 +1485,8 @@ button {
 		}
 		
 		&__img {
-			background-position: top 49% right 36%;
-    		background-size: 81%;
+			background-position: right 76% top 45%;
+    		background-size: 118%;
 		}
 	}
 
@@ -1936,7 +1936,6 @@ button {
 			}
 
 			span {
-				color: #971ce3;
 				font-size: 35px;
 				font-weight: 700;
 				line-height: 30px;
@@ -2135,6 +2134,10 @@ button {
 }
 
 @media (min-width: 1440px) {
+	
+	.close {
+		display: none;
+	}
 	.client .swiper__slide-desc {
 		justify-content: space-between;
 		align-items: start;
