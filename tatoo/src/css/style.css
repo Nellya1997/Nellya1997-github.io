@@ -431,7 +431,8 @@ ul {
   text-decoration: none;
   display: inline-block;
   padding: 17px 50px;
-  background-image: url(../../../src/images/bg-button.png);
+  color: #22082B;
+  background-image: url(../../src/images/bg-button.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
