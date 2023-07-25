@@ -124,10 +124,7 @@
     }
 
     &__check-in {
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexy(column);
 
         .first__text {
             @include fonty(14px, 400, 19px);

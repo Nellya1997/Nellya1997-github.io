@@ -373,10 +373,6 @@ template {
   padding: 0;
 }
 
-a {
-  color: rgb(34, 8, 43);
-}
-
 html {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
@@ -429,7 +425,7 @@ ul {
 }
 
 .link {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.36em;
   text-decoration: none;
@@ -478,7 +474,7 @@ ul {
   left: auto;
 }
 .title span {
-  max-width: 120px;
+  max-width: 119px;
   padding: 0 20px;
   display: inline-block;
 }
@@ -733,6 +729,7 @@ ul {
 @media (min-width: 768px) {
   .header {
     position: fixed;
+    height: auto;
     padding: 0;
   }
   .header .nav {
@@ -1021,6 +1018,7 @@ ul {
 .first__check-in {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .first__check-in .first__text {
@@ -1932,7 +1930,7 @@ ul {
   position: fixed;
   display: block;
   width: 81.25%;
-  max-height: 466px;
+  max-height: 90vh;
   overflow: auto;
   left: 50%;
   top: 50%;
@@ -2295,14 +2293,8 @@ ul {
     font-size: 25px;
   }
 }
-.reviews {
-  margin-bottom: 30px;
-}
 .reviews .swiper-wrapper .pc-slide {
   display: none;
-}
-.reviews .swiper {
-  padding-bottom: 53px;
 }
 
 @media (min-width: 767px) {
