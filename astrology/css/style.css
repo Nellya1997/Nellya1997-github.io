@@ -519,7 +519,7 @@ button {
 }
 .nav__menu.active {
   right: 0;
-  height: 52vh;
+  height: 72vh;
 }
 .nav__menu__title {
   color: #523960;
