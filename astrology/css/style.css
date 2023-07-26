@@ -408,6 +408,7 @@ button {
 .header__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .title {
@@ -1362,11 +1363,13 @@ button {
 .services__mini p {
   color: #e8afec;
   text-align: left;
+  font-size: calc(16px + 6 * (100vw - 320px) / 1920);
+  line-height: 100%;
 }
 .services__mini h3 {
   color: #e8afec;
   font-family: "BodegaScript", "font", sans-serif;
-  font-size: 25px;
+  font-size: calc(27px + 22 * (100vw - 320px) / 1920);
   font-style: normal;
   font-weight: 500;
   text-align: left;
@@ -1384,6 +1387,8 @@ button {
   margin-top: 30px;
 }
 .services__content p {
+  font-size: calc(14px + 6 * (100vw - 320px) / 1920);
+  line-height: 95%;
   margin-bottom: 30px;
   padding-left: 26px;
   background: url(../icon/services-card.svg) no-repeat;
@@ -1497,6 +1502,8 @@ button {
   padding: 0 20px;
 }
 .services__border .services__bonus p {
+  font-size: calc(14px + 6 * (100vw - 320px) / 1920);
+  line-height: 95%;
   text-align: center;
   background: inherit;
   padding: 0;
@@ -1980,7 +1987,7 @@ button {
     color: #e7d8e8;
   }
   .about__title::before {
-    width: 1230px;
+    width: 100%;
     height: 567px;
     bottom: 0;
     right: 0;
