@@ -43,6 +43,7 @@ const burger = document.querySelector('.burger');
 const navMenu = document.querySelector('.nav__menu');
 // const body = document.body;
 const close = document.querySelector('.close');
+const navLinks = document.querySelectorAll('.nav__list-link');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');
@@ -50,6 +51,14 @@ burger.addEventListener('click', () => {
   // body.classList.toggle('noscroll');
   // close.style.cssText = 'opacity: 0';
   burger.classList.remove('active');
+});
+
+function handleClick(event) {
+  navMenu.classList.remove('active');
+}
+
+navLinks.forEach(link => {
+  link.addEventListener('click', handleClick);
 });
 
 close.addEventListener('click', () => {
