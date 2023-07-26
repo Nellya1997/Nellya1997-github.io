@@ -1,7 +1,6 @@
 @charset "UTF-8";
 .submit {
   box-sizing: border-box;
-  position: relative;
 }
 .submit::before {
   display: none;
@@ -52,6 +51,10 @@
   background: #664a66;
   color: #e8afec;
 }
+.submit__form__checkbox {
+  position: relative;
+  z-index: 2;
+}
 .submit__form textarea {
   resize: none;
   padding: 12px 20px;
@@ -65,7 +68,6 @@
 }
 .submit__form .form-check-label a {
   text-decoration: underline;
-  z-index: 2;
 }
 .submit__form__button {
   padding-bottom: 7.63vw;
@@ -139,7 +141,7 @@
     background-image: url("../img/submit/circle.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 27%;
+    width: 23%;
     height: 80%;
     position: absolute;
     left: 0;
@@ -406,7 +408,6 @@ button {
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .title {
